@@ -8,10 +8,10 @@ import com.juancho1037.umadefoods.databinding.RegisterActivityBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
-
-    private lateinit var registerBinding: RegisterActivityBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+  
+  private lateinit var registerBinding: RegisterActivityBinding
+  
+  override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         registerBinding = RegisterActivityBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
