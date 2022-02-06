@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToLoginActivity() {
         val intent = Intent(this,LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }
 }
