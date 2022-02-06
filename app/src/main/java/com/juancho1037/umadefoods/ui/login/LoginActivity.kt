@@ -14,22 +14,12 @@ import com.juancho1037.umadefoods.ui.register.RegisterActivity
 class LoginActivity : AppCompatActivity()
 {
     private lateinit var loginBinding: LoginActivityBinding
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_activity)
-
-
         loginBinding=LoginActivityBinding.inflate(layoutInflater)
-
-        loginBinding.RegistroTextView.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
-
         setContentView(loginBinding.root)
-
-
 
         val credential = intent.extras
         var emailReceived: String? =""
@@ -37,8 +27,13 @@ class LoginActivity : AppCompatActivity()
 
         if (credential != null)
         {
-             emailReceived=credential.getString("email")
-             passwordReceived=credential.getString("password")
+            emailReceived=credential.getString("email")
+            passwordReceived=credential.getString("password")
+        }
+
+        loginBinding.RegistroTextView.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
         with(loginBinding){
@@ -52,27 +47,18 @@ class LoginActivity : AppCompatActivity()
                 }
                 else{
 
-                    if (email==emailReceived && password==passwordReceived && email.isNotEmpty() && password.isNotEmpty())
+                    if (email==emailReceived && password==passwordReceived)
                     {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                        intent.putExtra("email", userNameTextInputEdit.text.toString())
-
-
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
                     }
                     else {
                         Toast.makeText(this@LoginActivity, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
 
                     }
                 }
-
-
             }
-
         }
-
-
-
     }
-
-
 }
