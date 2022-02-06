@@ -4,6 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".MainActivity">
+    <!--Programacion de layout Mallama -->
+    <LinearLayout
+        android:id="@+id/Login_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--Programacion imagen, tener encuenta Login_Image_View, @drawable/login-->
+        <ImageView
+            android:id="@+id/Login_Image_View"
+            android:layout_width="match_parent"
+            android:layout_height="231dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/Logo_Image"
+            app:srcCompat="@drawable/login" />
+        <!--Programacion TexInputLayout, Cambiar @drawable/ic_user-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_name_tetx_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:startIconDrawable="@drawable/fullname_user_logo">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_name_text_input_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/new_email"
+                android:inputType="textWebEmailAddress"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Programacion TexInputLayout, Cambiar @drawable/ic_password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Password_text_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:startIconDrawable="@drawable/password_logo"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_text_input_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/InicionSecion"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/Registro_text_view"
+            style="@style/TextLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/no_tienes_una_cuenta_reg_strate"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Olvido_Contraseña_Text_View"
+            style="@style/TextLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/olvidaste_tu_contrase_a"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            tools:ignore="TextContrastCheck" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
