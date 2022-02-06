@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">U Made Foods</string>
+    <string name="image_register">imagen de registro</string>
+    <string name="complete_name">Nombre completo</string>
+    <string name="adress">Direccion</string>
+    <string name="new_email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="password_repeat">Repetir contraseña</string>
+    <string name="register_button">REGISTRAR</string>
     <string name="logoSplash">Logo splash</string>
 </resources>
