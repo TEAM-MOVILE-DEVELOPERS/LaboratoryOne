@@ -8,4 +8,6 @@
     <string name="password_repeat">Repetir contraseña</string>
     <string name="register_button">REGISTRAR</string>
     <string name="logoSplash">Logo splash</string>
+    <string name="sign_out">Cerrar sesion</string>
+    <string name="registerActivity">ActividadDeRegistro</string>
 </resources>
