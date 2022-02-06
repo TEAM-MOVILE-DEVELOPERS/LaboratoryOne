@@ -10,4 +10,9 @@
     <string name="logoSplash">Logo splash</string>
     <string name="sign_out">Cerrar sesion</string>
     <string name="registerActivity">ActividadDeRegistro</string>
+    <string name="Logo_Image">logo</string>
+    <string name="Image_Logo">Logo</string>
+    <string name="InicionSecion">Iniciar Sesión</string>
+    <string name="no_tienes_una_cuenta_reg_strate"> <a href= ""> ¿No tienes una cuenta?  Regístrate </a> </string>
+    <string name="olvidaste_tu_contrase_a"> <a href= ""> Olvidé mi contraseña</a></string>
 </resources>
