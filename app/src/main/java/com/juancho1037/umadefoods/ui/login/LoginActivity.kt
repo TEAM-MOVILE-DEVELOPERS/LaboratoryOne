@@ -57,11 +57,12 @@ class LoginActivity : AppCompatActivity()
                     {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        intent.putExtra("email" , email)
+                        intent.putExtra("password" , password)
                         startActivity(intent)
                     }
                     else {
                         Toast.makeText(this@LoginActivity, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-
                     }
                 }
             }
