@@ -16,4 +16,5 @@
     <string name="no_tienes_una_cuenta_reg_strate"> <a href= ""> ¿No tienes una cuenta?  Regístrate </a> </string>
     <string name="olvidaste_tu_contrase_a"> <a href= ""> Olvidé mi contraseña</a></string>
     <string name="scrollViewRegister">ScrollViewR</string>
+    <string name="crearCuenta_textView">Crea tu cuenta</string>
 </resources>

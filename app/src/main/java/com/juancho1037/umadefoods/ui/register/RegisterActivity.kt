@@ -11,21 +11,19 @@ import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
   private lateinit var registerBinding: RegisterActivityBinding
-  
+
       private fun checkEmail(email_: String): Boolean {
         return PatternsCompat.EMAIL_ADDRESS.matcher(email_).matches()
-    }
-      
-    override fun onCreate(savedInstanceState: Bundle?) {
+      }
+
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         registerBinding = RegisterActivityBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
         supportActionBar?.hide()
-        
+
         with(registerBinding) {
             registerButton.setOnClickListener {
-
-                if (password.length < 6) {
                 // val complete_name = fullnameEditText.text.toString()
                 // val address_name = adressEditText.text.toString()
                 val email = emailEditText.text.toString()
