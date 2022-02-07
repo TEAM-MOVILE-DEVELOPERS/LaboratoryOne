@@ -16,14 +16,15 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         finishAffinity()
-        finish()
         Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
     }
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
+        val credential = intent.extras
+        
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
