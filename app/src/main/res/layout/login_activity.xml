@@ -16,6 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <!--Programacion imagen, tener encuenta Login_Image_View, @drawable/login-->
+        <!--Programacion TexInputLayout, Cambiar @drawable/ic_user-->
+
         <ImageView
             android:id="@+id/Login_Image_View"
             android:layout_width="match_parent"
@@ -23,7 +25,7 @@
             android:layout_marginTop="10dp"
             android:contentDescription="@string/Logo_Image"
             app:srcCompat="@drawable/loginlogo_1" />
-        <!--Programacion TexInputLayout, Cambiar @drawable/ic_user-->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/user_name_tetx_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -73,7 +75,8 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/InicionSecion"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck"
+            />
 
         <TextView
             android:id="@+id/Registro_text_view"

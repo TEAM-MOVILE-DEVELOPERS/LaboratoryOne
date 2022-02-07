@@ -17,22 +17,34 @@ class RegisterActivity : AppCompatActivity() {
         registerBinding = RegisterActivityBinding.inflate(layoutInflater)
 
         setContentView(registerBinding.root)
-
+        supportActionBar?.hide()
         with(registerBinding){
-            registerButton.setOnClickListener{
+            registerButton.setOnClickListener {
                 val complete_name = fullnameEditText.text.toString()
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
                 val repeatPassword = repeatPassordEditText.text.toString()
-
-                if (password == repeatPassword){
-                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-                    intent.putExtra("email",email)
-                    intent.putExtra("password",password)
-                    startActivity(intent)
-
-                }else
-                    Toast.makeText(applicationContext, "Las contraseñas deben ser iguales", Toast.LENGTH_SHORT).show()
+                if (password.length < 6) {
+                    Toast.makeText(
+                        this@RegisterActivity ,
+                        "La contraseña debe ser mínimo de 6 dígitos" ,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    if (password == repeatPassword) {
+                        val intent = Intent(this@RegisterActivity , LoginActivity::class.java)
+                        intent.putExtra("email" , email)
+                        intent.putExtra("password" , password)
+                        startActivity(intent)
+            
+                    } else
+                        Toast.makeText(
+                            applicationContext ,
+                            "Las contraseñas deben ser iguales" ,
+                            Toast.LENGTH_SHORT
+                        ).show()
+        
+                }
             }
         }
 

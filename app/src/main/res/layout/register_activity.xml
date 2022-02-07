@@ -18,10 +18,9 @@
             android:id="@+id/imageView"
             android:layout_width="413dp"
             android:layout_height="271dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="-6dp"
             android:contentDescription="@string/image_register"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo_register" />
@@ -88,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/new_email"
+                android:inputType="textEmailAddress"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>

@@ -25,7 +25,6 @@
             android:exported="true" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:theme="@style/Splash"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

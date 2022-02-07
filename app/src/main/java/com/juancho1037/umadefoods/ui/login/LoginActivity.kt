@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         loginBinding=LoginActivityBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
-
+        supportActionBar?.hide()
         val credential = intent.extras
         var emailReceived: String? =""
         var passwordReceived: String?=""
