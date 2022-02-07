@@ -5,25 +5,36 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import com.juancho1037.umadefoods.databinding.ActivityMainBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
-
+    
     private lateinit var mainBinding : ActivityMainBinding
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
-    }
-
+    var emailReceived: String? =""
+    var passwordReceived: String? =""
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
+        val credentials = intent.extras
+        if (credentials != null){
+            credentials.getString("email").also{emailReceived = it}
+            credentials.getString("password").also{passwordReceived = it}
+        }
+        val userLogged: TextView = findViewById(R.id.email_text_view)
+        "Acceso exitoso:\n $emailReceived".also { userLogged.text = it }
+        
     }
-
+    
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_overflow, menu)
         return true
@@ -39,6 +50,8 @@ class MainActivity : AppCompatActivity() {
     private fun goToLoginActivity() {
         val intent = Intent(this,LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.putExtra("email" , emailReceived)
+        intent.putExtra("password" , passwordReceived)
         startActivity(intent)
     }
 }
