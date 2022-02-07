@@ -9,6 +9,8 @@ import com.juancho1037.umadefoods.databinding.RegisterActivityBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
+
+
   
   private lateinit var registerBinding: RegisterActivityBinding
   
@@ -21,9 +23,11 @@ class RegisterActivity : AppCompatActivity() {
         with(registerBinding){
             registerButton.setOnClickListener {
                 val complete_name = fullnameEditText.text.toString()
+                val adress_name = adressEditText.text.toString()
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
                 val repeatPassword = repeatPassordEditText.text.toString()
+
                 if (password.length < 6) {
                     Toast.makeText(
                         this@RegisterActivity ,
