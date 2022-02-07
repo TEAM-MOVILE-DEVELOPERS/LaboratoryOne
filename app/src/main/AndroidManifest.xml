@@ -13,6 +13,7 @@
             android:name=".ui.splash.splashActivity"
             android:exported="true"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:noHistory="true"
             android:theme="@style/Splash">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

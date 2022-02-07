@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity()
         val credential = intent.extras
         var emailReceived: String? =""
         var passwordReceived: String?=""
-
+        
         if (credential != null)
         {
             emailReceived=credential.getString("email")

@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
+        finishAffinity()
+        finish()
         Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
     }
 
