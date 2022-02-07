@@ -14,7 +14,13 @@ import com.juancho1037.umadefoods.ui.register.RegisterActivity
 class LoginActivity : AppCompatActivity()
 {
     private lateinit var loginBinding: LoginActivityBinding
-
+    
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
+    }
+    
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -23,8 +29,8 @@ class LoginActivity : AppCompatActivity()
         supportActionBar?.hide()
         val credential = intent.extras
         var emailReceived: String? =""
-        var passwordReceived: String?=""
-
+        var passwordReceived: String? =""
+        
         if (credential != null)
         {
             emailReceived=credential.getString("email")
@@ -51,11 +57,12 @@ class LoginActivity : AppCompatActivity()
                     {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        intent.putExtra("email" , email)
+                        intent.putExtra("password" , password)
                         startActivity(intent)
                     }
                     else {
                         Toast.makeText(this@LoginActivity, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-
                     }
                 }
             }
