@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/login_linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,10 +23,10 @@
 
         <ImageView
             android:id="@+id/login_image_view"
-            android:layout_width="317dp"
-            android:layout_height="234dp"
-            android:contentDescription="@string/Logo_Image"
-            app:srcCompat="@drawable/login_image_view" />
+            android:layout_width="371dp"
+            android:layout_height="308dp"
+            android:contentDescription="@string/logo_image_view"
+            app:srcCompat="@drawable/im_login" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_text_input_layout"
@@ -35,14 +35,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="18dp"
             app:startIconDrawable="@drawable/ic_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/new_email"
+                android:hint="@string/email_input_text"
                 android:inputType="textWebEmailAddress"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -63,7 +63,7 @@
                 android:id="@+id/password_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password"
+                android:hint="@string/password_input_text"
                 android:inputType="textPassword"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -71,18 +71,17 @@
         <Button
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/sign_in_text_view"
-            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+            android:layout_height="match_parent"
+            android:layout_margin="18dp"
+            android:textAllCaps="false"
+            android:text="@string/sign_in_button"
+            tools:ignore="TextContrastCheck" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
 
             <TextView
                 android:id="@+id/have_an_account_text_view"
@@ -99,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/register"
+                android:text="@string/register_button"
                 android:textAlignment="textStart"
                 android:layout_marginEnd="3dp"
                 style="@style/LinkTextView"
@@ -108,9 +107,9 @@
 
         <TextView
             android:id="@+id/forgot_password_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="18dp"
             android:text="@string/forgot_password_text_view"
             android:textAlignment="center"
             style="@style/LinkTextView"

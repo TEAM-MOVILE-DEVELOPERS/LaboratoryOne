@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.PatternsCompat
-import com.juancho1037.umadefoods.databinding.RegisterActivityBinding
+import com.juancho1037.umadefoods.databinding.ActivityRegisterBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
-  private lateinit var registerBinding: RegisterActivityBinding
+  private lateinit var registerBinding: ActivityRegisterBinding
 
       private fun checkEmail(email_: String): Boolean {
         return PatternsCompat.EMAIL_ADDRESS.matcher(email_).matches()
@@ -17,7 +17,7 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        registerBinding = RegisterActivityBinding.inflate(layoutInflater)
+        registerBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
         supportActionBar?.hide()
 
@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
                 // val address_name = adressEditText.text.toString()
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
-                val repeatPassword = repeatPassordEditText.text.toString()
+                val repeatPassword = repPasswordInputText.text.toString()
                 if (!checkEmail(email)) {
                     Toast.makeText(
                         this@RegisterActivity ,

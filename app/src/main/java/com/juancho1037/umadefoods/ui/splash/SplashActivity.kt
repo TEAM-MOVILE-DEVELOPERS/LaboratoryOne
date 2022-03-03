@@ -4,17 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.juancho1037.umadefoods.MainActivity
-import com.juancho1037.umadefoods.databinding.SplashActivityBinding
+import com.juancho1037.umadefoods.databinding.ActivitySplashBinding
 import java.util.*
 import kotlin.concurrent.timerTask
 
 class SplashActivity : AppCompatActivity() {
 
-    private lateinit var splashBinding: SplashActivityBinding
+    private lateinit var splashBinding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        splashBinding = SplashActivityBinding.inflate(layoutInflater)
+        splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
 
         val timer = Timer()
