@@ -36,7 +36,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/register_image_view" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/user_name_text_input_layout"
@@ -48,7 +48,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CreaTuCuenta_textView"
+            app:layout_constraintTop_toBottomOf="@+id/create_account_text_view"
             app:startIconDrawable="@drawable/ic_people">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -71,7 +71,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/completeName_textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_text_input_layout"
             app:startIconDrawable="@drawable/ic_address">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -93,7 +93,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/adress_textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/address_text_input_layout"
             app:startIconDrawable="@drawable/ic_email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -117,7 +117,7 @@
             app:endIconMode="password_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/new_email_text_input_layout"
             app:startIconDrawable="@drawable/ic_password">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -141,7 +141,7 @@
             app:endIconMode="password_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/new_password_text_input_layout"
             app:startIconDrawable="@drawable/ic_password">
 
             <com.google.android.material.textfield.TextInputEditText
