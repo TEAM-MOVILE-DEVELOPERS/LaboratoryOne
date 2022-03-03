@@ -13,8 +13,8 @@ import com.juancho1037.umadefoods.ui.login.LoginActivity
 class MainActivity : AppCompatActivity() {
     
     private lateinit var mainBinding : ActivityMainBinding
-    var emailReceived: String? =""
-    var passwordReceived: String? =""
+    private var emailReceived: String? =""
+    private var passwordReceived: String? =""
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +27,11 @@ class MainActivity : AppCompatActivity() {
         }
         val userLogged: TextView = findViewById(R.id.email_text_view)
         "Acceso exitoso:\n $emailReceived".also { userLogged.text = it }
-        
     }
     
     override fun onBackPressed() {
         super.onBackPressed()
-        finishAffinity()
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK + Intent.FLAG_ACTIVITY_CLEAR_TASK
         Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToLoginActivity() {
         val intent = Intent(this,LoginActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         intent.putExtra("email" , emailReceived)
         intent.putExtra("password" , passwordReceived)
         startActivity(intent)

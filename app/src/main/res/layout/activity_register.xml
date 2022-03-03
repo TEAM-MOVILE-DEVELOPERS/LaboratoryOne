@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_register1" />
+            app:srcCompat="@drawable/register_image_view" />
 
         <TextView
             android:id="@+id/CreaTuCuenta_textView"
@@ -35,7 +35,6 @@
             android:textColor="#FF5722"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/completeName_textInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -50,13 +49,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CreaTuCuenta_textView"
-            app:startIconDrawable="@drawable/fullname_user_logo">
+            app:startIconDrawable="@drawable/ic_people">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fullname_editText"
+                android:id="@+id/user_name_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/complete_name"
+                android:hint="@string/user_name_input_text"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -73,10 +72,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/completeName_textInputLayout"
-            app:startIconDrawable="@drawable/adress_logo">
+            app:startIconDrawable="@drawable/ic_address">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/adress_EditText"
+                android:id="@+id/address_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/adress"
@@ -94,7 +93,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/adress_textInputLayout"
-            app:startIconDrawable="@drawable/email_logo">
+            app:startIconDrawable="@drawable/ic_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_editText"
@@ -118,7 +117,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_textInputLayout"
-            app:startIconDrawable="@drawable/password_logo">
+            app:startIconDrawable="@drawable/ic_password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_editText"
@@ -142,7 +141,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_textInputLayout"
-            app:startIconDrawable="@drawable/password_logo">
+            app:startIconDrawable="@drawable/ic_password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/repeatPassord_editText"

@@ -1,12 +1,10 @@
 package com.juancho1037.umadefoods.ui.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.juancho1037.umadefoods.MainActivity
-import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.LoginActivityBinding
 import com.juancho1037.umadefoods.ui.register.RegisterActivity
 
@@ -14,12 +12,6 @@ import com.juancho1037.umadefoods.ui.register.RegisterActivity
 class LoginActivity : AppCompatActivity()
 {
     private lateinit var loginBinding: LoginActivityBinding
-    
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finishAffinity()
-        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
-    }
     
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -37,14 +29,14 @@ class LoginActivity : AppCompatActivity()
             passwordReceived=credential.getString("password")
         }
 
-        loginBinding.RegistroTextView.setOnClickListener {
+        loginBinding.registerTextView.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         with(loginBinding){
             loginButton.setOnClickListener{
-               val email = userNameTextInputEdit.text.toString()
+               val email = emailInputText.text.toString()
                val password = passwordTextInputEdit.text.toString()
 
                 if (userNameTextInputEdit.text.toString().isEmpty() || passwordTextInputEdit.text.toString().isEmpty())
@@ -68,4 +60,11 @@ class LoginActivity : AppCompatActivity()
             }
         }
     }
+    
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
+    }
+    
 }

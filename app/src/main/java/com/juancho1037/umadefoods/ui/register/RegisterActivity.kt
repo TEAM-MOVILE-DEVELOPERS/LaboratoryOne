@@ -1,11 +1,10 @@
 package com.juancho1037.umadefoods.ui.register
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.PatternsCompat
-import com.juancho1037.umadefoods.databinding.LoginActivityBinding
 import com.juancho1037.umadefoods.databinding.RegisterActivityBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 
@@ -29,8 +28,7 @@ class RegisterActivity : AppCompatActivity() {
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
                 val repeatPassword = repeatPassordEditText.text.toString()
-                val checked = checkEmail(email)
-                if (!checked) {
+                if (!checkEmail(email)) {
                     Toast.makeText(
                         this@RegisterActivity ,
                         "Formato de e-mail incorrecto." ,
@@ -39,7 +37,7 @@ class RegisterActivity : AppCompatActivity() {
                 } else {
                     if (password.length < 6) {
                         Toast.makeText(
-                            this@RegisterActivity ,
+                            this@RegisterActivity,
                             "La contraseña debe ser mínimo de 6 dígitos" ,
                             Toast.LENGTH_SHORT
                         ).show()
