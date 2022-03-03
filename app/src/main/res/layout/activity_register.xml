@@ -3,10 +3,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/register_ScrollView"
+    android:id="@+id/register_scroll_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:contentDescription="@string/scrollViewRegister">
+    android:contentDescription="@string/register_activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -19,11 +19,11 @@
             android:layout_width="413dp"
             android:layout_height="271dp"
             android:layout_marginTop="-6dp"
-            android:contentDescription="@string/image_register"
+            android:contentDescription="@string/register_image_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_register1" />
+            app:srcCompat="@drawable/im_register" />
 
         <TextView
             android:id="@+id/CreaTuCuenta_textView"
@@ -31,11 +31,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
-            android:text="@string/crearCuenta_textView"
+            android:text="@string/create_account_text_view"
             android:textColor="#FF5722"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/completeName_textInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -50,13 +49,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CreaTuCuenta_textView"
-            app:startIconDrawable="@drawable/fullname_user_logo">
+            app:startIconDrawable="@drawable/ic_people">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fullname_editText"
+                android:id="@+id/user_name_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/complete_name"
+                android:hint="@string/user_name_input_text"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -73,13 +72,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/completeName_textInputLayout"
-            app:startIconDrawable="@drawable/adress_logo">
+            app:startIconDrawable="@drawable/ic_address">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/adress_EditText"
+                android:id="@+id/address_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/adress"
+                android:hint="@string/address_input_text"
+                android:inputType="textShortMessage|textPostalAddress|textCapWords"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,13 +94,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/adress_textInputLayout"
-            app:startIconDrawable="@drawable/email_logo">
+            app:startIconDrawable="@drawable/ic_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/new_email"
+                android:hint="@string/email_input_text"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -118,20 +118,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_textInputLayout"
-            app:startIconDrawable="@drawable/password_logo">
+            app:startIconDrawable="@drawable/ic_password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password"
+                android:hint="@string/password_input_text"
                 android:inputType="textPassword"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rpassword_textInputLayout"
+            android:id="@+id/rep_password_text_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -142,13 +142,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_textInputLayout"
-            app:startIconDrawable="@drawable/password_logo">
+            app:startIconDrawable="@drawable/ic_password">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/repeatPassord_editText"
+                android:id="@+id/rep_password_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password_repeat"
+                android:hint="@string/rep_password_input_text"
                 android:inputType="textPassword"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -162,9 +162,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/register_button"
+            android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Rpassword_textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/rep_password_text_input_layout"
             tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

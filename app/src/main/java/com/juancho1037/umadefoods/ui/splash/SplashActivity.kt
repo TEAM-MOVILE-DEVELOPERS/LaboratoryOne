@@ -1,34 +1,32 @@
 package com.juancho1037.umadefoods.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.juancho1037.umadefoods.MainActivity
-import com.juancho1037.umadefoods.R
-import com.juancho1037.umadefoods.databinding.SplashActivityBinding
+import com.juancho1037.umadefoods.databinding.ActivitySplashBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
-import com.juancho1037.umadefoods.ui.register.RegisterActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 
-class splashActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
-    private lateinit var splashBinding: SplashActivityBinding
+    private lateinit var splashBinding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        splashBinding = SplashActivityBinding.inflate(layoutInflater)
+        splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
 
         val timer = Timer()
         timer.schedule(
             timerTask {
-                goToMainActivity()
+                goToLoginActivity()
             }, 2000
         )
     }
 
-    private fun goToMainActivity() {
+    private fun goToLoginActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)

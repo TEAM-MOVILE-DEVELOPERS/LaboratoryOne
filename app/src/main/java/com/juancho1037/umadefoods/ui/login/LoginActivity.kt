@@ -1,30 +1,22 @@
 package com.juancho1037.umadefoods.ui.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.juancho1037.umadefoods.MainActivity
-import com.juancho1037.umadefoods.R
-import com.juancho1037.umadefoods.databinding.LoginActivityBinding
+import com.juancho1037.umadefoods.databinding.ActivityLoginBinding
 import com.juancho1037.umadefoods.ui.register.RegisterActivity
 
 
 class LoginActivity : AppCompatActivity()
 {
-    private lateinit var loginBinding: LoginActivityBinding
-    
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finishAffinity()
-        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
-    }
+    private lateinit var loginBinding: ActivityLoginBinding
     
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        loginBinding=LoginActivityBinding.inflate(layoutInflater)
+        loginBinding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
         supportActionBar?.hide()
         val credential = intent.extras
@@ -37,17 +29,17 @@ class LoginActivity : AppCompatActivity()
             passwordReceived=credential.getString("password")
         }
 
-        loginBinding.RegistroTextView.setOnClickListener {
+        loginBinding.registerTextView.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         with(loginBinding){
             loginButton.setOnClickListener{
-               val email = userNameTextInputEdit.text.toString()
-               val password = passwordTextInputEdit.text.toString()
+               val email = emailInputText.text.toString()
+               val password = passwordInputText.text.toString()
 
-                if (userNameTextInputEdit.text.toString().isEmpty() || passwordTextInputEdit.text.toString().isEmpty())
+                if (email.isEmpty() || password.isEmpty())
                 {
                     Toast.makeText(this@LoginActivity, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
                 }
@@ -68,4 +60,11 @@ class LoginActivity : AppCompatActivity()
             }
         }
     }
+    
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+        Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
+    }
+    
 }

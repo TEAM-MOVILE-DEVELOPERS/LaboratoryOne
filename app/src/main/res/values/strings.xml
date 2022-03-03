@@ -1,20 +1,18 @@
 <resources>
     <string name="app_name">U Made Foods</string>
-    <string name="image_register">imagen de registro</string>
-    <string name="complete_name">Nombre completo</string>
-    <string name="adress">Direccion</string>
-    <string name="new_email">Correo electrónico</string>
-    <string name="password">Contraseña</string>
-    <string name="password_repeat">Repetir contraseña</string>
-    <string name="register_button">REGISTRAR</string>
-    <string name="logoSplash">Logo splash</string>
-    <string name="sign_out">Cerrar sesion</string>
-    <string name="registerActivity">ActividadDeRegistro</string>
-    <string name="Logo_Image">logo</string>
-    <string name="Image_Logo">Logo</string>
-    <string name="InicionSecion">Iniciar Sesión</string>
-    <string name="no_tienes_una_cuenta_reg_strate"> <a href= ""> ¿No tienes una cuenta?  Regístrate </a> </string>
-    <string name="olvidaste_tu_contrase_a"> <a href= ""> Olvidé mi contraseña</a></string>
-    <string name="scrollViewRegister">ScrollViewR</string>
-    <string name="crearCuenta_textView">Crea tu cuenta</string>
+    <string name="email_input_text">Correo electrónico</string>
+    <string name="password_input_text">Contraseña</string>
+    <string name="register_image_view">Imagen registro</string>
+    <string name="user_name_input_text">Nombre completo</string>
+    <string name="address_input_text">Dirección</string>
+    <string name="rep_password_input_text">Repetir contraseña</string>
+    <string name="sign_out_item">Cerrar sesion</string>
+    <string name="register_activity">Actividad de registro</string>
+    <string name="logo_image_view">Logo</string>
+    <string name="sign_in_button">Iniciar sesión</string>
+    <string name="register_button"><u>Regístrate</u></string>
+    <string name="have_an_account_text_view">¿No tienes una cuenta?</string>
+    <string name="forgot_password_text_view"> <u> Olvidé mi contraseña</u></string>
+    <string name="register_scroll_view">Scroll View de registro</string>
+    <string name="create_account_text_view">Crea tu cuenta</string>
 </resources>
