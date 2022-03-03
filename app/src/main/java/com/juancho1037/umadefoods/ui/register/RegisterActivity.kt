@@ -25,8 +25,8 @@ class RegisterActivity : AppCompatActivity() {
             registerButton.setOnClickListener {
                 // val complete_name = fullnameEditText.text.toString()
                 // val address_name = adressEditText.text.toString()
-                val email = emailEditText.text.toString()
-                val password = passwordEditText.text.toString()
+                val email = newEmailInputText.text.toString()
+                val password = newPasswordInputText.text.toString()
                 val repeatPassword = repPasswordInputText.text.toString()
                 if (!checkEmail(email)) {
                     Toast.makeText(
