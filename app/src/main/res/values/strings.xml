@@ -15,4 +15,5 @@
     <string name="forgot_password_text_view"> <u> Olvidé mi contraseña</u></string>
     <string name="register_scroll_view">Scroll View de registro</string>
     <string name="create_account_text_view">Crea tu cuenta</string>
+    <string name="add_button">Añadir</string>
 </resources>

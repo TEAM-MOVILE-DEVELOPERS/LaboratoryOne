@@ -20,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
         registerBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
         supportActionBar?.hide()
-
+/*
         with(registerBinding) {
             registerButton.setOnClickListener {
                 // val complete_name = fullnameEditText.text.toString()
@@ -57,6 +57,6 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
             }
-        }
+        }*/
     }
 }
