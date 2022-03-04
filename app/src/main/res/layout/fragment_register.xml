@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.newcook.NewCookFragment">
+        tools:context=".ui.register.RegisterFragment">
 
         <ImageView
             android:id="@+id/register_image_view"

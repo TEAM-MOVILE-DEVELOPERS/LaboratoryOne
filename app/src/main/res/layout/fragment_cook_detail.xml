@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.cook_detail.CookDetailFragment">
+    tools:context=".ui.home.cooks_list.cook_detail.CookDetailFragment">
 
     <TextView
         android:id="@+id/cook_name_text_view"

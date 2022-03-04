@@ -1,4 +1,4 @@
-package com.juancho1037.umadefoods.ui.cook_detail
+package com.juancho1037.umadefoods.ui.home.cooks_list.cook_detail
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,14 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentCookDetailBinding
-import com.juancho1037.umadefoods.databinding.FragmentNewCookBinding
 
 class CookDetailFragment : Fragment() {
 	private lateinit var cookDetailBinding: FragmentCookDetailBinding
 	private lateinit var cookDetailViewModel: CookDetailViewModel
-//	private val args : CookDetailFragmentArgs by navArgs() // se recive lo que venga
+	private val args : CookDetailFragmentArgs by navArgs() // se recive lo que venga
 	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
@@ -27,11 +25,11 @@ class CookDetailFragment : Fragment() {
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
-//		val cook = args.cook
+		val cook = args.cook
 		with(cookDetailBinding){
-			/*cookNameTextView.text = cook.name
+			cookNameTextView.text = cook.name
 			addressTextView.text = cook.address
-			emailTextView.text = cook.email*/
+			emailTextView.text = cook.email
 		}
 	}
 }

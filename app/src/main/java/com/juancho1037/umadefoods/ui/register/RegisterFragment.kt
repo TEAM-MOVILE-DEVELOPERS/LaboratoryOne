@@ -1,4 +1,4 @@
-package com.juancho1037.umadefoods.ui.newcook
+package com.juancho1037.umadefoods.ui.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,22 +9,22 @@ import androidx.core.util.PatternsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.juancho1037.umadefoods.databinding.FragmentNewCookBinding
+import com.juancho1037.umadefoods.databinding.FragmentRegisterBinding
 import com.juancho1037.umadefoods.model.Cook
 
-class NewCookFragment : Fragment() {
+class RegisterFragment : Fragment() {
 	
-	private lateinit var newCookBinding: FragmentNewCookBinding
-	private lateinit var newCookViewModel: NewCookViewModel
+	private lateinit var registerBinding: FragmentRegisterBinding
+	private lateinit var registerViewModel: RegisterViewModel
 	
 	override fun onCreateView(
 		inflater: LayoutInflater ,
 		container: ViewGroup? ,
 		savedInstanceState: Bundle?
 	): View {
-		newCookBinding = FragmentNewCookBinding.inflate(inflater, container , false)
-		newCookViewModel = ViewModelProvider(this)[NewCookViewModel::class.java]
-		return newCookBinding.root
+		registerBinding = FragmentRegisterBinding.inflate(inflater, container , false)
+		registerViewModel = ViewModelProvider(this)[RegisterViewModel::class.java]
+		return registerBinding.root
 	}
 	
 	private fun checkEmail(email_: String): Boolean {
@@ -33,7 +33,7 @@ class NewCookFragment : Fragment() {
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
-		with(newCookBinding){
+		with(registerBinding){
 			registerButton.setOnClickListener {
 				val name = userNameInputText.text.toString()
 				val email = newEmailInputText.text.toString()
@@ -63,7 +63,7 @@ class NewCookFragment : Fragment() {
 							).show()
 						} else {
 							val cook = Cook(name, email, address, password)
-							findNavController().navigate(NewCookFragmentDirections.actionNewCookFragmentToLoginFragment())
+							findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToLoginFragment())
 						}
 					}
 				}

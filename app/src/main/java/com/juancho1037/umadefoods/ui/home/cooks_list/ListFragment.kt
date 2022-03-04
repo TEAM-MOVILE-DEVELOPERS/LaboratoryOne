@@ -1,4 +1,4 @@
-package com.juancho1037.umadefoods.ui.list
+package com.juancho1037.umadefoods.ui.home.cooks_list
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.juancho1037.umadefoods.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {

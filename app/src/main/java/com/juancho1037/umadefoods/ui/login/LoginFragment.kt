@@ -1,6 +1,5 @@
 package com.juancho1037.umadefoods.ui.login
 
-import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,16 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
-import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentLoginBinding
-import com.juancho1037.umadefoods.ui.cook_detail.CookDetailViewModel
 
 class LoginFragment : Fragment() {
 	
 	private lateinit var loginBinding: FragmentLoginBinding
 	private lateinit var loginViewModel: LoginViewModel
-//	private val args : LoginFragmentArgs by navArgs()
+//	private val args: LoginFragmentArgs by navArgs()
 	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
@@ -36,7 +32,7 @@ class LoginFragment : Fragment() {
 //		val passwordReceived = cook.password
 		with(loginBinding){
 			registerTextView.setOnClickListener {
-				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToNewCookFragment())
+				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
 				val email = emailInputText.text.toString()
@@ -48,7 +44,7 @@ class LoginFragment : Fragment() {
 //						Toast.makeText(requireContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
 //					} else {
 						// TODO: limpiar la pila para que se salga de la app al back pressed
-						findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCookDetailFragment())
+//						findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCookDetailFragment())
 //					}
 				}
 			}
