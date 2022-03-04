@@ -1,14 +1,8 @@
 package com.juancho1037.umadefoods
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.TextView
-import android.widget.Toast
 import com.juancho1037.umadefoods.databinding.ActivityMainBinding
-import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     
