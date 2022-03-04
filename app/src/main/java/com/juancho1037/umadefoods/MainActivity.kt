@@ -20,16 +20,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
-        val credentials = intent.extras
+        /*val credentials = intent.extras
         if (credentials != null){
             credentials.getString("email").also{emailReceived = it}
             credentials.getString("password").also{passwordReceived = it}
         }
         val userLogged: TextView = findViewById(R.id.email_text_view)
-        "Acceso exitoso:\n $emailReceived".also { userLogged.text = it }
+        "Acceso exitoso:\n $emailReceived".also { userLogged.text = it }*/
+        
     }
     
-    override fun onBackPressed() {
+    /*override fun onBackPressed() {
         super.onBackPressed()
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK + Intent.FLAG_ACTIVITY_CLEAR_TASK
         Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
@@ -52,5 +53,5 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("email" , emailReceived)
         intent.putExtra("password" , passwordReceived)
         startActivity(intent)
-    }
+    }*/
 }

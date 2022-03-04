@@ -3,20 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_mobile"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/newCookFragment"
         android:name="com.juancho1037.umadefoods.ui.newcook.NewCookFragment"
         android:label="NewCookFragment"
-        tools:layout="@layout/fragment_new_cook" />
+        tools:layout="@layout/fragment_new_cook" >
+        <action
+            android:id="@+id/action_newCookFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.juancho1037.umadefoods.ui.list.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/cookDetailFragment"
+        android:name="com.juancho1037.umadefoods.ui.cook_detail.CookDetailFragment"
+        android:label="fragment_cook_detail"
+        tools:layout="@layout/fragment_cook_detail" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.juancho1037.umadefoods.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_listFragment_to_newCookFragment"
+            android:id="@+id/action_loginFragment_to_newCookFragment"
             app:destination="@id/newCookFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_cookDetailFragment"
+            app:destination="@id/cookDetailFragment" />
     </fragment>
 </navigation>

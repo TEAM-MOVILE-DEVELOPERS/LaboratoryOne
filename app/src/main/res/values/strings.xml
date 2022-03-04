@@ -9,11 +9,15 @@
     <string name="sign_out_item">Cerrar sesion</string>
     <string name="register_activity">Actividad de registro</string>
     <string name="logo_image_view">Logo</string>
-    <string name="sign_in_button">Iniciar sesión</string>
+    <string name="login_button">Iniciar sesión</string>
     <string name="register_button"><u>Regístrate</u></string>
     <string name="have_an_account_text_view">¿No tienes una cuenta?</string>
     <string name="forgot_password_text_view"> <u> Olvidé mi contraseña</u></string>
     <string name="register_scroll_view">Scroll View de registro</string>
     <string name="create_account_text_view">Crea tu cuenta</string>
     <string name="add_button">Añadir</string>
+    <string name="cook_name_text_view">Nombre del cocinero</string>
+    <string name="dish_name_text_view">Nombre del plato</string>
+    <string name="address_text_view">Dirección</string>
+    <string name="email_text_view">Correo electrónico</string>
 </resources>

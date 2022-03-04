@@ -5,8 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.juancho1037.umadefoods.MainActivity
 import com.juancho1037.umadefoods.databinding.ActivitySplashBinding
-import com.juancho1037.umadefoods.ui.login.LoginActivity
-import com.juancho1037.umadefoods.ui.register.RegisterActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -28,7 +26,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun goToLoginActivity() {
-        val intent = Intent(this, RegisterActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }
