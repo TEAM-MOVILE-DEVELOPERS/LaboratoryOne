@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.juancho1037.umadefoods.R
+import com.juancho1037.umadefoods.databinding.FragmentDeleteBinding
 
 class DeleteFragment : Fragment() {
 	
@@ -14,10 +15,12 @@ class DeleteFragment : Fragment() {
 		fun newInstance() = DeleteFragment()
 	}
 	
+	private lateinit var deleteBinding: FragmentDeleteBinding
 	private lateinit var viewModel: DeleteViewModel
 	
 	override fun onCreateView(
-		inflater: LayoutInflater , container: ViewGroup? ,
+		inflater: LayoutInflater,
+		container: ViewGroup? ,
 		savedInstanceState: Bundle?
 	): View? {
 		return inflater.inflate(R.layout.fragment_delete , container , false)

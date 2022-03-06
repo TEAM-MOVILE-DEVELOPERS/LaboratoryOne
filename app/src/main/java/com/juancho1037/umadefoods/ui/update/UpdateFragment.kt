@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.juancho1037.umadefoods.R
+import com.juancho1037.umadefoods.databinding.FragmentUpdateBinding
 
 class UpdateFragment : Fragment() {
 	
@@ -14,6 +15,7 @@ class UpdateFragment : Fragment() {
 		fun newInstance() = UpdateFragment()
 	}
 	
+	private lateinit var updateBinding: FragmentUpdateBinding
 	private lateinit var viewModel: UpdateViewModel
 	
 	override fun onCreateView(
