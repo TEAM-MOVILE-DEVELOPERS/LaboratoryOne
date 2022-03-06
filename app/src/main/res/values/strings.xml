@@ -20,4 +20,8 @@
     <string name="dish_name_text_view">Nombre del plato</string>
     <string name="address_text_view">Dirección</string>
     <string name="email_text_view">Correo electrónico</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
