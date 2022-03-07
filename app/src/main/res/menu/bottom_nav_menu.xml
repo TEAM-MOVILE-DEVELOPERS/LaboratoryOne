@@ -12,12 +12,12 @@
         android:title="@string/title_register"/>
 
     <item
-        android:id="@+id/updateFragment"
-        android:icon="@drawable/ic_update"
-        android:title="@string/title_update"/>
+        android:id="@+id/shoppingCartFragment"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="@string/title_shopping_cart"/>
 
     <item
-        android:id="@+id/deleteFragment"
-        android:icon="@drawable/ic_delete"
-        android:title="@string/title_delete"/>
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/title_profile"/>
 </menu>

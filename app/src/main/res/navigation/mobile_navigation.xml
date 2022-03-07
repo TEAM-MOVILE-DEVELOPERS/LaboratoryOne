@@ -50,17 +50,15 @@
         android:name="com.juancho1037.umadefoods.ui.home.cooks_list.ListFragment"
         android:label="@string/title_list"
         tools:layout="@layout/fragment_list" />
-
     <fragment
-        android:id="@+id/updateFragment"
-        android:name="com.juancho1037.umadefoods.ui.update.UpdateFragment"
-        android:label="@string/title_update"
-        tools:layout="@layout/fragment_update" />
-
+        android:id="@+id/profileFragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/deleteFragment"
-        android:name="com.juancho1037.umadefoods.ui.delete.DeleteFragment"
-        android:label="@string/title_delete"
-        tools:layout="@layout/fragment_delete" />
+        android:id="@+id/shoppingCartFragment"
+        android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
+        android:label="fragment_shopping_cart"
+        tools:layout="@layout/fragment_shopping_cart" />
 
 </navigation>
