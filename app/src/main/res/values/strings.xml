@@ -40,5 +40,14 @@
     <string name="title_shop">Carrito</string>
     <string name="title_shopping_cart">Carrito</string>
     <string name="title_cooks_list">Cocineros</string>
+    <string name="cd_im_dishes">dishes_image</string>
+    <string name="type_dish_textview">Tipo de Platillo</string>
+    <string name="dish_name_textview">Nombre del Platillo</string>
+    <string name="made_for_textview">Hecho por ...</string>
+    <string name="price_textview">$ Precio</string>
+    <string name="time_preparation_textview">30 - 45 min</string>
+    <string name="location_textview">Mi ubicación</string>
+    <string name="name_chef_textview">Nombre del Chef</string>
+    <string name="rank_cook">Rango del Chef</string>
 
 </resources>
