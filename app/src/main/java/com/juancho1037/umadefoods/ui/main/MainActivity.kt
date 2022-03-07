@@ -1,4 +1,4 @@
-package com.juancho1037.umadefoods
+package com.juancho1037.umadefoods.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,11 +20,10 @@ class MainActivity : AppCompatActivity() {
             credentials.getString("password").also{passwordReceived = it}
         }
         val userLogged: TextView = findViewById(R.id.email_text_view)
-        "Acceso exitoso:\n $emailReceived".also { userLogged.text = it }*/
-        
+        "Acceso exitoso:\n $emailReceived".also { userLogged.text = it }
     }
     
-    /*override fun onBackPressed() {
+    override fun onBackPressed() {
         super.onBackPressed()
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK + Intent.FLAG_ACTIVITY_CLEAR_TASK
         Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
