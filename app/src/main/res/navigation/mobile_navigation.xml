@@ -38,14 +38,19 @@
         android:label="@string/title_list"
         tools:layout="@layout/fragment_cooks_list"/>
     <fragment
-        android:id="@+id/profileFragment2"
+        android:id="@+id/profileFragment"
         android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/shoppingCartFragment2"
+        android:id="@+id/shoppingCartFragment"
         android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
-        android:label="fragment_shopping_cart"
+        android:label="@string/title_shopping_cart"
         tools:layout="@layout/fragment_shopping_cart" />
+    <fragment
+        android:id="@+id/dishesListFragment"
+        android:name="com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment"
+        android:label="@string/title_dishes"
+        tools:layout="@layout/fragment_dishes_list" />
 
 </navigation>

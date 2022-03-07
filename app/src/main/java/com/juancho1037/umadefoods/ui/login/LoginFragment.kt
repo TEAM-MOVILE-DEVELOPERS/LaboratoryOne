@@ -36,7 +36,7 @@ class LoginFragment : Fragment() {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
-				//findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
+				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 //				loginViewModel.ingresoDatos(
 //					emailInputText.text.toString(),
 //					passwordInputText.text.toString()
