@@ -1,4 +1,4 @@
-package com.juancho1037.umadefoods
+package com.juancho1037.umadefoods.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
+import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.ActivityMainBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 

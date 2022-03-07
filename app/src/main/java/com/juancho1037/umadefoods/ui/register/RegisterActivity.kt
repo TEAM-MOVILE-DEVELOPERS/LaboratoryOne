@@ -4,59 +4,48 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.util.PatternsCompat
+import androidx.lifecycle.ViewModelProvider
 import com.juancho1037.umadefoods.databinding.ActivityRegisterBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
-  private lateinit var registerBinding: ActivityRegisterBinding
 
-      private fun checkEmail(email_: String): Boolean {
-        return PatternsCompat.EMAIL_ADDRESS.matcher(email_).matches()
-      }
+    private lateinit var registerBinding: ActivityRegisterBinding
+    private lateinit var registroViewModel: RegistroViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         registerBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
-        supportActionBar?.hide()
+
+        registroViewModel = ViewModelProvider(this).get(RegistroViewModel::class.java)
+
+        registroViewModel.msgDone.observe(this) { resul ->
+            Toast.makeText(this, resul, Toast.LENGTH_SHORT).show()
+        }
+
+        registroViewModel.dataValidated.observe(this){result ->
+            onMsgDoneSubcibe(result)
+        }
 
         with(registerBinding) {
             registerButton.setOnClickListener {
-                // val complete_name = fullnameEditText.text.toString()
-                // val address_name = adressEditText.text.toString()
-                val email = newEmailInputText.text.toString()
-                val password = newPasswordInputText.text.toString()
-                val repeatPassword = repPasswordInputText.text.toString()
-                if (!checkEmail(email)) {
-                    Toast.makeText(
-                        this@RegisterActivity ,
-                        "Formato de e-mail incorrecto." ,
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else {
-                    if (password.length < 6) {
-                        Toast.makeText(
-                            this@RegisterActivity,
-                            "La contraseña debe ser mínimo de 6 dígitos" ,
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    } else {
-                        if (password != repeatPassword) {
-                            Toast.makeText(
-                                applicationContext ,
-                                "Las contraseñas deben ser iguales" ,
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        } else {
-                            val intent = Intent(this@RegisterActivity , LoginActivity::class.java)
-                            intent.putExtra("email" , email)
-                            intent.putExtra("password" , password)
-                            startActivity(intent)
-                        }
-                    }
-                }
+                registroViewModel.enterDatos(
+
+                    userNameInputText.text.toString(),
+                    addressInputText.text.toString(),
+                    newEmailInputText.text.toString(),
+                    newPasswordInputText.text.toString(),
+                    repPasswordInputText.text.toString()
+                )
             }
         }
+    }
+
+    private fun onMsgDoneSubcibe(result: Boolean?) {
+
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+
     }
 }

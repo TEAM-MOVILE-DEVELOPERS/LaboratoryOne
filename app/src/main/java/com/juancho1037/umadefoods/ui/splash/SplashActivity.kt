@@ -3,7 +3,6 @@ package com.juancho1037.umadefoods.ui.splash
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.juancho1037.umadefoods.MainActivity
 import com.juancho1037.umadefoods.databinding.ActivitySplashBinding
 import com.juancho1037.umadefoods.ui.login.LoginActivity
 import java.util.*
