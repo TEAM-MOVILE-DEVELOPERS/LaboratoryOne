@@ -43,6 +43,12 @@
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
     </fragment>
 
     <fragment
@@ -62,5 +68,15 @@
         android:name="com.juancho1037.umadefoods.ui.delete.DeleteFragment"
         android:label="@string/title_delete"
         tools:layout="@layout/fragment_delete" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

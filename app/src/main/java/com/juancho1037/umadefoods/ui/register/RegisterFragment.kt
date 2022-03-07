@@ -26,10 +26,6 @@ class RegisterFragment : Fragment() {
 		return registerBinding.root
 	}
 	
-	private fun checkEmail(email_: String): Boolean {
-		return PatternsCompat.EMAIL_ADDRESS.matcher(email_).matches()
-	}
-	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
 		registerViewModel.msgDone.observe(viewLifecycleOwner) { result ->
