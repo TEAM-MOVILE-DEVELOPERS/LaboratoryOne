@@ -47,9 +47,9 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.ListFragment"
+        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.CooksListFragment"
         android:label="@string/title_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_cooks_list" />
 
     <fragment
         android:id="@+id/updateFragment"

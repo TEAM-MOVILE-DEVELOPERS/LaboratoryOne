@@ -56,4 +56,55 @@
 
     <style name="Theme.UMadeFoods.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- RatingBar Theme -->
+    <style name="AppTheme.RatingBar" parent = "android:style/Widget.Material.RatingBar.Small">
+        <item name="colorControlNormal">@color/secondary_text</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="minHeight">20dp</item>
+        <item name="maxHeight">20dp</item>
+    </style>
+
+    <!-- Card Dishes Styles-->
+    <style name="type_dish_style">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="name_dish_style">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:shadowColor">@color/shadow</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="location_style">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:shadowColor">@color/shadow</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="made_for_style">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:shadowColor">@color/shadow</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="price_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="preparation_time_style">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
 </resources>

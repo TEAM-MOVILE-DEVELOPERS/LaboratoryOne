@@ -17,4 +17,5 @@
     <color name="link_text">#0037FF</color>
     <color name="icons">#BEBEBE</color>
     <color name="divider">#BDBDBD</color>
+    <color name="shadow">#40000000</color>
 </resources>

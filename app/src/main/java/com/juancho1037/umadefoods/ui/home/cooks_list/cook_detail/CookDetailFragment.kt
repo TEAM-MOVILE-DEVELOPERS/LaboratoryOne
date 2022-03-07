@@ -8,10 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.juancho1037.umadefoods.databinding.FragmentCookDetailBinding
+import com.juancho1037.umadefoods.ui.home.cooks_list.CooksViewModel
 
 class CookDetailFragment : Fragment() {
 	private lateinit var cookDetailBinding: FragmentCookDetailBinding
-	private lateinit var cookDetailViewModel: CookDetailViewModel
+	private lateinit var cookDetailViewModel: CooksViewModel
 	private val args : CookDetailFragmentArgs by navArgs() // se recive lo que venga
 	
 	override fun onCreateView(
@@ -19,7 +20,7 @@ class CookDetailFragment : Fragment() {
 		savedInstanceState: Bundle?
 	): View {
 		cookDetailBinding = FragmentCookDetailBinding.inflate(inflater, container , false)
-		cookDetailViewModel = ViewModelProvider(this)[CookDetailViewModel::class.java]
+		cookDetailViewModel = ViewModelProvider(this)[CooksViewModel::class.java]
 		return cookDetailBinding.root
 	}
 	
