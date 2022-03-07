@@ -3,25 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_mobile"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/cooksListFragment">
 
-    <fragment
-        android:id="@+id/cookDetailFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.cook_detail.CookDetailFragment"
-        android:label="fragment_cook_detail"
-        tools:layout="@layout/fragment_cook_detail" >
-        <argument
-            android:name="Cook"
-            app:argType="com.juancho1037.umadefoods.model.Cook" />
-    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.juancho1037.umadefoods.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_cookDetailFragment"
-            app:destination="@id/cookDetailFragment" />
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -44,19 +32,18 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.ListFragment"
-        android:label="@string/title_list"
-        tools:layout="@layout/fragment_list" />
+        android:id="@+id/cooksListFragment"
+        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.CooksListFragment"
+        android:label="CooksListFragment"
+        tools:layout="@layout/fragment_cooks_list"/>
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profileFragment2"
         android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/shoppingCartFragment"
+        android:id="@+id/shoppingCartFragment2"
         android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
         android:label="fragment_shopping_cart"
         tools:layout="@layout/fragment_shopping_cart" />

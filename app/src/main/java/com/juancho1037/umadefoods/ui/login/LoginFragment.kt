@@ -14,7 +14,6 @@ class LoginFragment : Fragment() {
 	
 	private lateinit var loginBinding: FragmentLoginBinding
 	private lateinit var loginViewModel: LoginViewModel
-//	private val args: LoginFragmentArgs by navArgs()
 	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
@@ -25,34 +24,27 @@ class LoginFragment : Fragment() {
 		return loginBinding.root
 	}
 	
-	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
 		loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 		loginViewModel.msgDone.observe(viewLifecycleOwner) { result ->
 			onMsgDoneSubscribe(result)
 		}
-//		val cook = args.cook
-//		val emailReceived = cook.email
-//		val passwordReceived = cook.password
+
 		with(loginBinding){
 			registerTextView.setOnClickListener {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
-				loginViewModel.ingresoDatos(
-					emailInputText.text.toString(),
-					passwordInputText.text.toString()
-				)
+				//findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
+//				loginViewModel.ingresoDatos(
+//					emailInputText.text.toString(),
+//					passwordInputText.text.toString()
+//				)
 			}
 		}
 	}
 	private fun onMsgDoneSubscribe(msg: String?) {
-		Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
+		Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
 	}
-	
-	/*override fun onBackPressed() {
-		super.onBackPressed()
-		finishAffinity()
-		Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
-	}*/
 }

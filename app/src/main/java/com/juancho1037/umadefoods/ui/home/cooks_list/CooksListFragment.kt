@@ -6,19 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.juancho1037.umadefoods.databinding.FragmentListBinding
+import com.juancho1037.umadefoods.databinding.FragmentCooksListBinding
 
-class ListFragment : Fragment() {
-	private lateinit var listBinding: FragmentListBinding
-	private lateinit var listViewModel: ListViewModel
+class CooksListFragment : Fragment() {
+	private lateinit var cooksListBinding: FragmentCooksListBinding
+	private lateinit var cooksViewModel: CooksViewModel
 	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
 		savedInstanceState: Bundle?
 	): View {
-		listBinding = FragmentListBinding.inflate(inflater, container , false)
-		listViewModel = ViewModelProvider(this)[ListViewModel::class.java]
-		return listBinding.root
+		cooksListBinding = FragmentCooksListBinding.inflate(inflater, container , false)
+		cooksViewModel = ViewModelProvider(this)[CooksViewModel::class.java]
+		return cooksListBinding.root
 	}
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {

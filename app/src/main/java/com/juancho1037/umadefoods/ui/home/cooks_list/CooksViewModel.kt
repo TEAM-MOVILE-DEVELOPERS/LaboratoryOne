@@ -2,6 +2,6 @@ package com.juancho1037.umadefoods.ui.home.cooks_list
 
 import androidx.lifecycle.ViewModel
 
-class ListViewModel : ViewModel() {
+class CooksViewModel : ViewModel() {
 	// TODO: Implement the ViewModel
 }
