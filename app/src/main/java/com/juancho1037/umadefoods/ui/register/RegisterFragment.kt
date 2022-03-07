@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.juancho1037.umadefoods.databinding.FragmentRegisterBinding
-import com.juancho1037.umadefoods.model.Cook
 
 class RegisterFragment : Fragment() {
 	
@@ -33,41 +32,26 @@ class RegisterFragment : Fragment() {
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
+		registerViewModel.msgDone.observe(viewLifecycleOwner) { result ->
+			onMsgDoneSubscribe(result)
+		}
+		registerViewModel.dataValidated.observe(viewLifecycleOwner){
+			findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToLoginFragment())
+		}
 		with(registerBinding){
 			registerButton.setOnClickListener {
-				val name = userNameInputText.text.toString()
-				val email = newEmailInputText.text.toString()
-			    val address = addressInputText.text.toString()
-				val password = newPasswordInputText.text.toString()
-				val repeatPassword = repPasswordInputText.text.toString()
-				// Validación de e-mail y contraseña. Si son correctos, se crea el cocinero
-				if (!checkEmail(email)) {
-					Toast.makeText(
-						requireContext() ,
-						"Formato de e-mail incorrecto." ,
-						Toast.LENGTH_SHORT
-					).show()
-				} else {
-					if (password.length < 6) {
-						Toast.makeText(
-							requireContext(),
-							"La contraseña debe ser mínimo de 6 dígitos" ,
-							Toast.LENGTH_SHORT
-						).show()
-					} else {
-						if (password != repeatPassword) {
-							Toast.makeText(
-								requireContext(),
-								"Las contraseñas deben ser iguales" ,
-								Toast.LENGTH_SHORT
-							).show()
-						} else {
-							val cook = Cook(name, email, address, password)
-							findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToLoginFragment())
-						}
-					}
-				}
+				
+				registerViewModel.enterDatos(
+					userNameInputText.text.toString(),
+					addressInputText.text.toString(),
+					newEmailInputText.text.toString(),
+					newPasswordInputText.text.toString(),
+					repPasswordInputText.text.toString()
+				)
 			}
 		}
+	}
+	private fun onMsgDoneSubscribe(msg: String?) {
+		Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
 	}
 }

@@ -27,6 +27,10 @@ class LoginFragment : Fragment() {
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
+		loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
+		loginViewModel.msgDone.observe(viewLifecycleOwner) { result ->
+			onMsgDoneSubscribe(result)
+		}
 //		val cook = args.cook
 //		val emailReceived = cook.email
 //		val passwordReceived = cook.password
@@ -35,20 +39,20 @@ class LoginFragment : Fragment() {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
-				val email = emailInputText.text.toString()
-				val password = passwordInputText.text.toString()
-				if (email.isEmpty() || password.isEmpty()) {
-					Toast.makeText(requireContext(), "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
-				} else{
-//					if (email!=emailReceived || password!=passwordReceived) {
-//						Toast.makeText(requireContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-//					} else {
-						// TODO: limpiar la pila para que se salga de la app al back pressed
-//						findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCookDetailFragment())
-//					}
-				}
+				loginViewModel.ingresoDatos(
+					emailInputText.text.toString(),
+					passwordInputText.text.toString()
+				)
 			}
 		}
 	}
+	private fun onMsgDoneSubscribe(msg: String?) {
+		Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
+	}
 	
+	/*override fun onBackPressed() {
+		super.onBackPressed()
+		finishAffinity()
+		Toast.makeText(this,"Bye Bye",Toast.LENGTH_SHORT).show()
+	}*/
 }

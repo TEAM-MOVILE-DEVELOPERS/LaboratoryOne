@@ -6,9 +6,9 @@ import com.juancho1037.umadefoods.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     
-    private lateinit var mainBinding : ActivityMainBinding
-    private var emailReceived: String? =""
-    private var passwordReceived: String? =""
+    private lateinit var mainBinding: ActivityMainBinding
+    private var emailReceived: String? = ""
+    private var passwordReceived: String? = ""
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,4 +47,5 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("password" , passwordReceived)
         startActivity(intent)
     }*/
+    }
 }
