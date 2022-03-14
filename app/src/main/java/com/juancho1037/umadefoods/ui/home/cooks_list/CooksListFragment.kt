@@ -13,13 +13,14 @@ import com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment
 
 class CooksListFragment : Fragment() {
 	companion object {
+		const val PAGE_TITLE = "Cocineros"
 		@JvmStatic
 		fun newInstance() = CooksListFragment()
 	}
 	private lateinit var cooklistBinding: FragmentCooksListBinding
 	private lateinit var cooksViewModel: CooksViewModel
 	private lateinit var cooksAdapter: CooksAdapter
-	private var cookslist: ArrayList<Cook> = ArrayList()
+	private var cooksList: ArrayList<Cook> = ArrayList()
 	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
@@ -33,7 +34,7 @@ class CooksListFragment : Fragment() {
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
 
-		cooksAdapter = CooksAdapter(cookslist)
+		cooksAdapter = CooksAdapter(cooksList)
 
 		cooklistBinding.cooksRecyclerview.apply{
 			layoutManager = LinearLayoutManager(this@CooksListFragment.requireContext())
@@ -43,7 +44,7 @@ class CooksListFragment : Fragment() {
 	}
 
 	private fun onLoadCooksDoneSubscribe(cooksListLoaded: ArrayList<Cook>){
-		cookslist = cooksListLoaded
-		cooksAdapter.appendItems(cookslist)
+		cooksList = cooksListLoaded
+		cooksAdapter.appendItems(cooksList)
 	}
 }

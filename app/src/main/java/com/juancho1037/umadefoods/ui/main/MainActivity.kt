@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.ActivityMainBinding
+import com.juancho1037.umadefoods.ui.home.HomeFragment
 import com.juancho1037.umadefoods.ui.home.cooks_list.CooksListFragment
 import com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment
+import com.juancho1037.umadefoods.ui.profile.ProfileFragment
 import com.juancho1037.umadefoods.ui.register.RegisterFragment
 import com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment
 
@@ -27,28 +29,28 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item: MenuItem ->
             when (item.itemId) {
-                R.id.dishesListFragment   -> {
-                    replaceFragment(DishesListFragment.newInstance() , FRAGMENT_FIRST)
+                R.id.homeFragment   -> {
+                    replaceFragment(HomeFragment.newInstance() , FRAGMENT_HOME)
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.cooksListFragment -> {
+                R.id.profileFragment -> {
                     replaceFragment(
-                        CooksListFragment.newInstance() ,
-                        FRAGMENT_SECOND
+                        ProfileFragment.newInstance() ,
+                        FRAGMENT_FAVORITES
                     )
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.shoppingCartFragment -> {
                     replaceFragment(
                         ShoppingCartFragment.newInstance() ,
-                        FRAGMENT_VIEWPAGER
+                        FRAGMENT_SHOPPING_CART
                     )
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.registerFragment -> {
                     replaceFragment(
                         RegisterFragment.newInstance() ,
-                        FRAGMENT_VIEWPAGER
+                        FRAGMENT_PROFILE
                     )
                     return@OnNavigationItemSelectedListener true
                 }
@@ -67,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         val navigation : BottomNavigationView = mainBinding.navView
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         val ft = supportFragmentManager.beginTransaction()
-        ft.add(R.id.fragment_container , DishesListFragment.newInstance() , FRAGMENT_FIRST)
+        ft.add(R.id.fragment_container , HomeFragment.newInstance() , FRAGMENT_HOME)
             .commit()
     }
     
@@ -78,9 +80,10 @@ class MainActivity : AppCompatActivity() {
     }
     
     companion object {
-        const val FRAGMENT_VIEWPAGER = "FRAGMENT_VIEWPAGER"
-        const val FRAGMENT_FIRST = "FRAGMENT_FIRST"
-        const val FRAGMENT_SECOND = "FRAGMENT_SECOND"
+        const val FRAGMENT_HOME = "FRAGMENT_HOME"
+        const val FRAGMENT_SHOPPING_CART = "FRAGMENT_SHOPPING_CART"
+        const val FRAGMENT_FAVORITES = "FRAGMENT_FAVORITES"
+        const val FRAGMENT_PROFILE = "FRAGMENT_PROFILE"
     }
     
 }

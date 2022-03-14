@@ -50,5 +50,6 @@
     <string name="name_chef_textview">Nombre del Chef</string>
     <string name="rank_cook">Rango del Chef</string>
     <string name="title_dishes">Menú</string>
+    <string name="title_home">Home</string>
 
 </resources>
