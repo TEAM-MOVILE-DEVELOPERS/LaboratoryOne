@@ -1,18 +1,15 @@
 package com.juancho1037.umadefoods.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.ActivityMainBinding
+import com.juancho1037.umadefoods.ui.favorites.FavoritesFragment
 import com.juancho1037.umadefoods.ui.home.HomeFragment
-import com.juancho1037.umadefoods.ui.home.cooks_list.CooksListFragment
-import com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment
 import com.juancho1037.umadefoods.ui.profile.ProfileFragment
-import com.juancho1037.umadefoods.ui.register.RegisterFragment
 import com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment
 
 /*
@@ -30,13 +27,9 @@ class MainActivity : AppCompatActivity() {
         BottomNavigationView.OnNavigationItemSelectedListener { item: MenuItem ->
             when (item.itemId) {
                 R.id.homeFragment   -> {
-                    replaceFragment(HomeFragment.newInstance() , FRAGMENT_HOME)
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.profileFragment -> {
                     replaceFragment(
-                        ProfileFragment.newInstance() ,
-                        FRAGMENT_FAVORITES
+                        HomeFragment.newInstance() ,
+                        FRAGMENT_HOME
                     )
                     return@OnNavigationItemSelectedListener true
                 }
@@ -47,9 +40,16 @@ class MainActivity : AppCompatActivity() {
                     )
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.registerFragment -> {
+                R.id.favoritesFragment -> {
                     replaceFragment(
-                        RegisterFragment.newInstance() ,
+                        FavoritesFragment.newInstance() ,
+                        FRAGMENT_FAVORITES
+                    )
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.profileFragment -> {
+                    replaceFragment(
+                        ProfileFragment.newInstance() ,
                         FRAGMENT_PROFILE
                     )
                     return@OnNavigationItemSelectedListener true
