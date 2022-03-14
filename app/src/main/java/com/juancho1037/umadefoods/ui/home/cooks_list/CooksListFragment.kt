@@ -12,6 +12,10 @@ import com.juancho1037.umadefoods.ui.home.cooks_list.local_cooks.Cook
 import com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment
 
 class CooksListFragment : Fragment() {
+	companion object {
+		@JvmStatic
+		fun newInstance() = CooksListFragment()
+	}
 	private lateinit var cooklistBinding: FragmentCooksListBinding
 	private lateinit var cooksViewModel: CooksViewModel
 	private lateinit var cooksAdapter: CooksAdapter

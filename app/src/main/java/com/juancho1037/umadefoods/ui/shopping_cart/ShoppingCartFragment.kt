@@ -7,10 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.juancho1037.umadefoods.databinding.FragmentShoppingCartBinding
+import com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment
 
 class ShoppingCartFragment : Fragment() {
-	
-	companion object;
+	companion object {
+		@JvmStatic
+		fun newInstance() = ShoppingCartFragment()
+	}
 	private lateinit var shoppingCartBinding: FragmentShoppingCartBinding
 	private lateinit var shoppingCartViewModel: ShoppingCartViewModel
 	

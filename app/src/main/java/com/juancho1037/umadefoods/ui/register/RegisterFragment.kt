@@ -12,7 +12,10 @@ import androidx.navigation.fragment.findNavController
 import com.juancho1037.umadefoods.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
-	
+	companion object {
+		@JvmStatic
+		fun newInstance() = RegisterFragment()
+	}
 	private lateinit var registerBinding: FragmentRegisterBinding
 	private lateinit var registerViewModel: RegisterViewModel
 	

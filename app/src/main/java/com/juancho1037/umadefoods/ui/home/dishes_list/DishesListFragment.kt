@@ -11,7 +11,12 @@ import com.juancho1037.umadefoods.databinding.FragmentDishesListBinding
 import com.juancho1037.umadefoods.ui.home.dishes_list.local_dishes.Dish
 
 class DishesListFragment : Fragment() {
-
+    
+    companion object {
+        @JvmStatic
+        fun newInstance() = DishesListFragment()
+    }
+    
     private lateinit var listBinding: FragmentDishesListBinding
     private lateinit var listviewModel: DishesViewModel
     private lateinit var dishesAdapter: DishesAdapter
