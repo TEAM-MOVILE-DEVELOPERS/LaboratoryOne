@@ -1,6 +1,7 @@
 package com.juancho1037.umadefoods.ui.splash
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,16 +20,12 @@ class SplashFragment : Fragment() {
 		savedInstanceState: Bundle?
 	): View {
 		splashBinding = FragmentSplashBinding.inflate(inflater,container , false)
-		val timer = Timer()
-		timer.schedule(
-			timerTask {
-				goToLoginFragment()
+		// TODO(Reemplazar Handler por Executor ... ¿corrutinas?)
+		Handler().postDelayed(
+			{
+				findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
 			}, 2000
 		)
 		return splashBinding.root
-	}
-	
-	private fun goToLoginFragment(){
-		findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
 	}
 }

@@ -1,5 +1,6 @@
 package com.juancho1037.umadefoods.ui.login
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.juancho1037.umadefoods.databinding.FragmentLoginBinding
+import com.juancho1037.umadefoods.ui.main.MainActivity
 
 class LoginFragment : Fragment() {
 	
@@ -36,11 +38,10 @@ class LoginFragment : Fragment() {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
-				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
-//				loginViewModel.ingresoDatos(
-//					emailInputText.text.toString(),
-//					passwordInputText.text.toString()
-//				)
+//				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
+				val intent = Intent(requireContext(), MainActivity::class.java)
+		        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
 			}
 		}
 	}

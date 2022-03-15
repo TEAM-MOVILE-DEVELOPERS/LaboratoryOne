@@ -11,7 +11,6 @@ import com.juancho1037.umadefoods.databinding.FragmentDishesListBinding
 import com.juancho1037.umadefoods.ui.home.dishes_list.local_dishes.Dish
 
 class DishesListFragment : Fragment() {
-    
     companion object {
         const val PAGE_TITLE : String = "Menú"
         @JvmStatic
