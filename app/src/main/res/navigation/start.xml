@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_mobile"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -32,30 +32,5 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/cooksListFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.CooksListFragment"
-        android:label="@string/title_list"
-        tools:layout="@layout/fragment_cooks_list"/>
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/shoppingCartFragment"
-        android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
-        android:label="@string/title_shopping_cart"
-        tools:layout="@layout/fragment_shopping_cart" />
-    <fragment
-        android:id="@+id/dishesListFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment"
-        android:label="@string/title_dishes"
-        tools:layout="@layout/fragment_dishes_list" />
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
 
 </navigation>

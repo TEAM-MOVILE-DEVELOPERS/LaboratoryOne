@@ -15,13 +15,13 @@ class CooksAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CooksAdapter.CooksViewHolder {
+    ): CooksViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.cook_card,parent,false)
         return CooksViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CooksAdapter.CooksViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CooksViewHolder, position: Int) {
         val cook = cooksList[position]
         holder.bind(cook)
     }

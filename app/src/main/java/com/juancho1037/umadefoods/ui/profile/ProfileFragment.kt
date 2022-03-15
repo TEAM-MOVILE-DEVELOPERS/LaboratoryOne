@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentProfileBinding
+import androidx.navigation.fragment.findNavController
 
 class ProfileFragment : Fragment() {
 	private lateinit var profileBinding: FragmentProfileBinding
@@ -21,5 +21,16 @@ class ProfileFragment : Fragment() {
 	
 	companion object {
 		fun newInstance() =	ProfileFragment()
+	}
+
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		super.onViewCreated(view , savedInstanceState)
+		
+		
+		with(profileBinding) {
+			paymentTextView.setOnClickListener {
+//				//findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToPaymentFragment())
+			}
+		}
 	}
 }

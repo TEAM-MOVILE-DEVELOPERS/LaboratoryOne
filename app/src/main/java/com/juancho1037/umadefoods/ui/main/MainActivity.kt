@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
     }
     
 }
-/*
+/*      Para usar con el binding
         val navView: BottomNavigationView = mainBinding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_bottom)
         // Passing each menu ID as a set of Ids because each

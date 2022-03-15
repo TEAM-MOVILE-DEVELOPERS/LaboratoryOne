@@ -52,5 +52,16 @@
     <string name="title_dishes">Menú</string>
     <string name="title_home">Home</string>
     <string name="title_favorites">Favoritos</string>
+    <string name="tittle_pay">Agrega metodo de pago</string>
+    <string name="type">Ingrese el tipo de tarjeta:</string>
+    <string name="number">Ingrese el número de la tarjeta:</string>
+    <string name="date">Ingrese la fecha de expiración:</string>
+    <string name="code">Ingrese código de verificación:</string>
+    <string name="add">Agregar</string>
+    <string name="payment">Pagos</string>
+    <string name="ejemplo_info">Información de tarjeta</string>
+    <string name="title_dish_detail">Detalle del plato</string>
+    <string name="payment_text_view">Métodos de pago</string>
+    <string name="add_payment_text_view">Agrega método de pago</string>
 
 </resources>
