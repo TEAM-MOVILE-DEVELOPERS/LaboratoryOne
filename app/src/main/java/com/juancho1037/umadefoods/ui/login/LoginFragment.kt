@@ -38,10 +38,10 @@ class LoginFragment : Fragment() {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
-//				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
-				val intent = Intent(requireContext(), MainActivity::class.java)
-		        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
+				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainActivity())
+//				val intent = Intent(requireContext(), MainActivity::class.java)
+//		        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+//                startActivity(intent)
 			}
 		}
 	}

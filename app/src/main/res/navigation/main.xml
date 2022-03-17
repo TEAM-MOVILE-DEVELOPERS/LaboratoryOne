@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/profile_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.juancho1037.umadefoods.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/shopping_cart_fragment"
+        android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
+        android:label="fragment_shopping_cart"
+        tools:layout="@layout/fragment_shopping_cart" />
+    <fragment
+        android:id="@+id/favorites_fragment"
+        android:name="com.juancho1037.umadefoods.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/dishesListFragment"
+        android:name="com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment"
+        android:label="fragment_dishes_list"
+        tools:layout="@layout/fragment_dishes_list" />
+</navigation>
