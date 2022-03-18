@@ -3,6 +3,7 @@ package com.juancho1037.umadefoods.ui.main
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -34,6 +35,19 @@ class MainActivity : AppCompatActivity() {
             setOf(R.id.home_fragment, R.id.shopping_cart_fragment, R.id.favorites_fragment, R.id.profile_fragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomBar.setupWithNavController(navController)
+        // Esconder el bottom Tomado de:
+        // https://stackoverflow.com/a/64022255/12162298
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.splash_fragment
+                || destination.id == R.id.login_fragment
+                || destination.id == R.id.register_fragment) {
+                bottomBar.visibility = View.GONE
+                supportActionBar?.hide()
+            } else {
+                bottomBar.visibility = View.VISIBLE
+                supportActionBar?.show()
+            }
+        }
     }
     
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

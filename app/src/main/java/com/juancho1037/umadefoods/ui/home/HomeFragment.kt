@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.NavHostFragment
@@ -25,6 +26,9 @@ class HomeFragment : Fragment() {
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
+		
+//		(activity as AppCompatActivity?)!!.supportActionBar!!.show()
+		
 		val labels = listOf(getString(R.string.title_cooks_list), getString(R.string.title_dishes_list))
 		val navGraphsIds = listOf(R.navigation.dishes, R.navigation.cooks)
 		// Call the view pager component from the layout and assign a childFragmentManager to its adapter property

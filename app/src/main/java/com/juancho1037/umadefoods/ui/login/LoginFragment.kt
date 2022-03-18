@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.juancho1037.umadefoods.databinding.FragmentLoginBinding
 import com.juancho1037.umadefoods.ui.main.MainActivity
@@ -32,19 +33,23 @@ class LoginFragment : Fragment() {
 		loginViewModel.msgDone.observe(viewLifecycleOwner) { result ->
 			onMsgDoneSubscribe(result)
 		}
-
+		// Esconder la ActionBar, necesario para cuando regresa de Home
+		// ya que ahí la vuelve a mostrar
+//		(activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+		
 		with(loginBinding){
 			registerTextView.setOnClickListener {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
 			}
 			loginButton.setOnClickListener {
-				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainActivity())
+				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
 //				val intent = Intent(requireContext(), MainActivity::class.java)
 //		        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
 //                startActivity(intent)
 			}
 		}
 	}
+	
 	private fun onMsgDoneSubscribe(msg: String?) {
 		Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
 	}
