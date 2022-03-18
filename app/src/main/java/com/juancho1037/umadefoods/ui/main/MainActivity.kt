@@ -1,6 +1,8 @@
 package com.juancho1037.umadefoods.ui.main
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -34,7 +36,26 @@ class MainActivity : AppCompatActivity() {
         bottomBar.setupWithNavController(navController)
     }
     
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val retValue = super.onCreateOptionsMenu(menu)
+        // The NavigationView already has these same navigation items, so we only add
+        // navigation items to the menu here if there isn't a NavigationView
+        menuInflater.inflate(R.menu.overflow_menu, menu)
+        return retValue
+    }
+    
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Have Navigation UI Handle the item selection
+        // Have the NavigationUI look for an action or destination matching the menu
+        // item id and navigate there if found.
+        // Otherwise, bubble up to the parent.
+        return item.onNavDestinationSelected(findNavController(mainBinding.navHostFragment.id))
+                || super.onOptionsItemSelected(item)
+    }
+    
     override fun onSupportNavigateUp(): Boolean {
+        // Allows NavigationUI to support proper up navigation or the drawer layout
+        // drawer menu, depending on the situation
         return findNavController(mainBinding.navHostFragment.id).navigateUp(appBarConfiguration)
     }
     

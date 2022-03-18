@@ -41,7 +41,6 @@ class PaymentFragment : Fragment() {
                     numberInputText.text.toString(),
                     dateInputText.text.toString(),
                     codeInputText.text.toString()
-
                 )
             }
         }
@@ -53,10 +52,8 @@ class PaymentFragment : Fragment() {
             val number : String=numberInputText.text.toString()
             val date : String = dateInputText.text.toString()
             val code : String =  codeInputText.text.toString()
-
             paymentViewModel.savePayment(type, number, date, code)
         }
-
     }
 
     private fun onMsgDoneSubscribe(msg: String?) {

@@ -16,7 +16,7 @@
         android:id="@+id/payment_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/payment_text_view"
+        android:text="@string/title_payment"
         style="@style/LinkTextView"
         />
 

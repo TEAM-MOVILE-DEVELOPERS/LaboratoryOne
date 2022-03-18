@@ -14,11 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.UMadeFoods.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
     <!--
     <style name="Theme.UMadeFoods.Login" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
     <style name="Theme.UMadeFoods.Register" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
@@ -51,10 +46,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="Theme.UMadeFoods.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.UMadeFoods.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- RatingBar Theme -->
     <style name="AppTheme.RatingBar" parent = "android:style/Widget.Material.RatingBar.Small">
