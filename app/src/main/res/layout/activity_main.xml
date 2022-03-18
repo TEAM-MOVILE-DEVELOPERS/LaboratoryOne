@@ -9,15 +9,22 @@
     android:orientation="vertical"
     tools:context=".ui.main.MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accent"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
     <!-- Do not add: app:navGraph="@navigation/graph"
     or: android:name="androidx.navigation.fragment.NavHostFragment" -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_width="match_parent"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:navGraph="@navigation/main"
+        android:layout_weight="1"
         app:defaultNavHost="true"
         />
 <!--

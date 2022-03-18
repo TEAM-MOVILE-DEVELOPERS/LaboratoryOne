@@ -19,17 +19,12 @@ class ProfileFragment : Fragment() {
 		return profileBinding.root
 	}
 	
-	companion object {
-		fun newInstance() =	ProfileFragment()
-	}
-
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
 		
-		
 		with(profileBinding) {
 			paymentTextView.setOnClickListener {
-//				//findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToPaymentFragment())
+				findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToPaymentFragment())
 			}
 		}
 	}

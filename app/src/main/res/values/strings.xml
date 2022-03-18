@@ -1,45 +1,40 @@
 <resources>
     <string name="app_name">U Made Foods</string>
+<!--    Fragmento Registro -->
     <string name="email_input_text">Correo electrónico</string>
     <string name="password_input_text">Contraseña</string>
     <string name="register_image_view">Imagen registro</string>
     <string name="user_name_input_text">Nombre completo</string>
     <string name="address_input_text">Dirección</string>
     <string name="rep_password_input_text">Repetir contraseña</string>
+<!--    Menú overflow -->
     <string name="sign_out_item">Cerrar sesion</string>
-    <string name="register_activity">Actividad de registro</string>
+<!--    Fragmento Splash -->
     <string name="logo_image_view">Logo</string>
+<!--    Fragmento Login-->
     <string name="login_button">Iniciar sesión</string>
     <string name="register_button"><u>Regístrate</u></string>
     <string name="have_an_account_text_view">¿No tienes una cuenta?</string>
     <string name="forgot_password_text_view"> <u> Olvidé mi contraseña</u></string>
-    <string name="register_scroll_view">Scroll View de registro</string>
     <string name="create_account_text_view">Crea tu cuenta</string>
     <string name="add_button">Añadir</string>
     <string name="cook_name_text_view">Nombre del cocinero</string>
     <string name="dish_name_text_view">Nombre del plato</string>
     <string name="address_text_view">Dirección</string>
     <string name="email_text_view">Correo electrónico</string>
+
     <string name="title_register">Registro</string>
-    <string name="title_list">Cocineros</string>
-    <string name="title_update">Actualizar</string>
-    <string name="title_delete">Eliminar</string>
-    <string name="title_activity_drawer">DrawerActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="title_activity_tabs">TabsActivity</string>
     <string name="title_login">Login</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_profile">Perfil</string>
     <string name="title_shop">Carrito</string>
     <string name="title_shopping_cart">Carrito</string>
     <string name="title_cooks_list">Cocineros</string>
+    <string name="title_dishes_list">Menú</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="tittle_pay">Agrega metodo de pago</string>
     <string name="cd_im_dishes">dishes_image</string>
     <string name="type_dish_textview">Tipo de Platillo</string>
     <string name="dish_name_textview">Nombre del Platillo</string>
@@ -49,10 +44,6 @@
     <string name="location_textview">Mi ubicación</string>
     <string name="name_chef_textview">Nombre del Chef</string>
     <string name="rank_cook">Rango del Chef</string>
-    <string name="title_dishes">Menú</string>
-    <string name="title_home">Home</string>
-    <string name="title_favorites">Favoritos</string>
-    <string name="tittle_pay">Agrega metodo de pago</string>
     <string name="type">Ingrese el tipo de tarjeta:</string>
     <string name="number">Ingrese el número de la tarjeta:</string>
     <string name="date">Ingrese la fecha de expiración:</string>
@@ -63,5 +54,6 @@
     <string name="title_dish_detail">Detalle del plato</string>
     <string name="payment_text_view">Métodos de pago</string>
     <string name="add_payment_text_view">Agrega método de pago</string>
+    <string name="title_payment">Métodos de pago</string>
 
 </resources>

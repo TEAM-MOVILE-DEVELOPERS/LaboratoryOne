@@ -3,31 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/profile_fragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
         android:id="@+id/home_fragment"
         android:name="com.juancho1037.umadefoods.ui.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/shopping_cart_fragment"
         android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
-        android:label="fragment_shopping_cart"
+        android:label="@string/title_shopping_cart"
         tools:layout="@layout/fragment_shopping_cart" />
     <fragment
         android:id="@+id/favorites_fragment"
         android:name="com.juancho1037.umadefoods.ui.favorites.FavoritesFragment"
-        android:label="fragment_favorites"
+        android:label="@string/title_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment
         android:id="@+id/profile_fragment"
         android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_fragment_to_payment_fragment"
+            app:destination="@id/payment_fragment" />
+    </fragment>
     <fragment
-        android:id="@+id/dishesListFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.dishes_list.DishesListFragment"
-        android:label="fragment_dishes_list"
-        tools:layout="@layout/fragment_dishes_list" />
+        android:id="@+id/payment_fragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.PaymentFragment"
+        android:label="@string/title_payment"
+        tools:layout="@layout/fragment_payment"
+        />
 </navigation>
