@@ -27,9 +27,4 @@ class SplashFragment : Fragment() {
 		)
 		return splashBinding.root
 	}
-	
-	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
-		super.onViewCreated(view , savedInstanceState)
-//		(activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-	}
 }

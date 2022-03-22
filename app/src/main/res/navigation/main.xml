@@ -3,19 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/home_fragment">
+    app:startDestination="@id/splash_fragment">
 
     <fragment
         android:id="@+id/home_fragment"
         android:name="com.juancho1037.umadefoods.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_home_fragment_to_navigation"
-            app:destination="@id/navigation"
-            app:popUpTo="@id/home_fragment"
-            app:popUpToInclusive="true" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/shopping_cart_fragment"
         android:name="com.juancho1037.umadefoods.ui.shopping_cart.ShoppingCartFragment"
@@ -41,28 +35,24 @@
         android:label="@string/title_payment"
         tools:layout="@layout/fragment_payment"
         />
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/splash_fragment">
-        <fragment
-            android:id="@+id/splash_fragment"
-            android:name="com.juancho1037.umadefoods.ui.splash.SplashFragment"
-            android:label="fragment_splash"
-            tools:layout="@layout/fragment_splash">
-            <action
-                android:id="@+id/action_splash_fragment_to_login_fragment"
-                app:destination="@id/login_fragment"
-                app:popUpTo="@id/splash_fragment"
-                app:popUpToInclusive="true" />
-        </fragment>
-        <fragment
-            android:id="@+id/register_fragment"
-            android:name="com.juancho1037.umadefoods.ui.register.RegisterFragment"
-            android:label="RegisterFragment"
-            tools:layout="@layout/fragment_register">
-            <action
-                android:id="@+id/action_register_fragment_to_login_fragment"
-                app:destination="@id/login_fragment" />
-        </fragment>
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.juancho1037.umadefoods.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_fragment_to_login_fragment"
+            app:destination="@id/login_navigation"
+            app:popUpTo="@id/splash_fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:popUpTo="@id/splash_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation android:id="@+id/login_navigation"
+        app:startDestination="@id/login_fragment">
         <fragment
             android:id="@+id/login_fragment"
             android:name="com.juancho1037.umadefoods.ui.login.LoginFragment"
@@ -76,6 +66,15 @@
             <action
                 android:id="@+id/action_login_fragment_to_register_fragment"
                 app:destination="@id/register_fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/register_fragment"
+            android:name="com.juancho1037.umadefoods.ui.register.RegisterFragment"
+            android:label="RegisterFragment"
+            tools:layout="@layout/fragment_register">
+            <action
+                android:id="@+id/action_register_fragment_to_login_fragment"
+                app:destination="@id/login_fragment" />
         </fragment>
     </navigation>
 </navigation>
