@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.commitNow
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -47,12 +48,37 @@ class HomeFragment : Fragment() {
 	                       lifecycle: Lifecycle ,
 	                       private val navGraphsIds: List<Int>
 	) : FragmentStateAdapter(fragmentManager, lifecycle) {
+		
 		override fun getItemCount(): Int = navGraphsIds.size
 		
 		override fun createFragment(position: Int): Fragment {
 			// Return a NEW fragment instance in createFragment(int)
 			return NavHostFragment.create(navGraphsIds[position])
 		}
+		
+		init {
+			// Needs: "androidx.viewpager2:viewpager2:1.1.0-alpha01" or higher
+			// Taken from: https://stackoverflow.com/a/62629996
+			// Add a FragmentTransactionCallback to handle changing
+			// the primary navigation fragment
+			registerFragmentTransactionCallback(object : FragmentTransactionCallback() {
+				override fun onFragmentMaxLifecyclePreUpdated(
+					fragment: Fragment,
+					maxLifecycleState: Lifecycle.State
+				) = if (maxLifecycleState == Lifecycle.State.RESUMED) {
+					// This fragment is becoming the active Fragment - set it to
+					// the primary navigation fragment in the OnPostEventListener
+					OnPostEventListener {
+						fragment.parentFragmentManager.commitNow {
+							setPrimaryNavigationFragment(fragment)
+						}
+					}
+				} else {
+					super.onFragmentMaxLifecyclePreUpdated(fragment, maxLifecycleState)
+				}
+			})
+		}
+		
 	}
 	
 	// Needed to avoid memory leaks

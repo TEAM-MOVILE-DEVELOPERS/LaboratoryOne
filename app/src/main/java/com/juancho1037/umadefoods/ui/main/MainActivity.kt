@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
-        val toolbar = mainBinding.toolbar
-        setSupportActionBar(toolbar)
+        
+        // Inicializar las variables del Navigation
         val navHostFragment : NavHostFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController : NavController = navHostFragment.navController
 //        val navController = findNavController(navHostFragment.id)
         val bottomBar  : BottomNavigationView = mainBinding.bottomBar
@@ -33,10 +33,16 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(R.id.home_fragment, R.id.shopping_cart_fragment, R.id.favorites_fragment, R.id.profile_fragment))
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        
+        // Configurar BottomBar
         bottomBar.setupWithNavController(navController)
-        // Esconder el bottom Tomado de:
-        // https://stackoverflow.com/a/64022255/12162298
+        
+        // Configurar ActionBar con el correcto funcionamiento del botón Arriba
+        val toolbar = mainBinding.toolbar
+        setSupportActionBar(toolbar)
+        toolbar.setupWithNavController(navController, appBarConfiguration)
+        // Esconder el bottom y el action bar
+        // Tomado de https://stackoverflow.com/a/64022255/12162298
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if(destination.id == R.id.splash_fragment
                 || destination.id == R.id.login_fragment
@@ -48,6 +54,8 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar?.show()
             }
         }
+//        val collapsingToolbar = mainBinding.collapsingToolbarLayout
+//        collapsingToolbar.setupWithNavController(toolbar, navController, appBarConfiguration)
     }
     
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -66,11 +74,4 @@ class MainActivity : AppCompatActivity() {
         return item.onNavDestinationSelected(findNavController(mainBinding.navHostFragment.id))
                 || super.onOptionsItemSelected(item)
     }
-    
-    override fun onSupportNavigateUp(): Boolean {
-        // Allows NavigationUI to support proper up navigation or the drawer layout
-        // drawer menu, depending on the situation
-        return findNavController(mainBinding.navHostFragment.id).navigateUp(appBarConfiguration)
-    }
-    
 }
