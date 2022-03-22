@@ -31,9 +31,8 @@ class MainActivity : AppCompatActivity() {
         val bottomBar  : BottomNavigationView = mainBinding.bottomBar
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
+        appBarConfiguration = AppBarConfiguration(
             setOf(R.id.home_fragment, R.id.shopping_cart_fragment, R.id.favorites_fragment, R.id.profile_fragment))
-        
         // Configurar BottomBar
         bottomBar.setupWithNavController(navController)
         
@@ -54,8 +53,6 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar?.show()
             }
         }
-//        val collapsingToolbar = mainBinding.collapsingToolbarLayout
-//        collapsingToolbar.setupWithNavController(toolbar, navController, appBarConfiguration)
     }
     
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
