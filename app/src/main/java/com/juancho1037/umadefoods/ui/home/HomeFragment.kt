@@ -1,20 +1,21 @@
 package com.juancho1037.umadefoods.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 	private lateinit var homeBinding: FragmentHomeBinding
+	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
 		savedInstanceState: Bundle?
@@ -26,10 +27,6 @@ class HomeFragment : Fragment() {
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
-		
-//		(activity as AppCompatActivity?)!!.supportActionBar!!.show()
-		
-		val labels = listOf(getString(R.string.title_cooks_list), getString(R.string.title_dishes_list))
 		val navGraphsIds = listOf(R.navigation.dishes, R.navigation.cooks)
 		// Call the view pager component from the layout and assign a childFragmentManager to its adapter property
 		homeBinding.homeViewPager.adapter =
@@ -38,6 +35,12 @@ class HomeFragment : Fragment() {
 			viewLifecycleOwner.lifecycle,
 			navGraphsIds
 		)
+		val labels = listOf(getString(R.string.title_dishes_list), getString(R.string.title_cooks_list))
+		val tabLayout = homeBinding.tabLayout
+		val tabLayoutMediator = TabLayoutMediator(tabLayout, homeBinding.homeViewPager) {tab, position ->
+			tab.text = (labels[position])
+		}
+		tabLayoutMediator.attach()
 	}
 	
 	class HomeAdapter(fragmentManager: FragmentManager ,
@@ -50,7 +53,6 @@ class HomeFragment : Fragment() {
 			// Return a NEW fragment instance in createFragment(int)
 			return NavHostFragment.create(navGraphsIds[position])
 		}
-		
 	}
 	
 	// Needed to avoid memory leaks
