@@ -15,7 +15,7 @@ class RegisterFragment : Fragment() {
 	
 	private lateinit var registerBinding: FragmentRegisterBinding
 	private lateinit var registerViewModel: RegisterViewModel
-	
+
 	override fun onCreateView(
 		inflater: LayoutInflater ,
 		container: ViewGroup? ,
@@ -25,19 +25,22 @@ class RegisterFragment : Fragment() {
 		registerViewModel = ViewModelProvider(this)[RegisterViewModel::class.java]
 		return registerBinding.root
 	}
-	
-	private fun checkEmail(email_: String): Boolean {
+
+	private fun checkEmailFormat(email_: String): Boolean {
 		return PatternsCompat.EMAIL_ADDRESS.matcher(email_).matches()
 	}
 	
-	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
+	override fun onViewCreated(view: View , savedInstanceState: Bundle?)
+	{
 		super.onViewCreated(view , savedInstanceState)
+
 		registerViewModel.msgDone.observe(viewLifecycleOwner) { result ->
 			onMsgDoneSubscribe(result)
 		}
 		registerViewModel.dataValidated.observe(viewLifecycleOwner){
 			findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToLoginFragment())
 		}
+
 		with(registerBinding){
 			registerButton.setOnClickListener {
 				
