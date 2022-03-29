@@ -1,50 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:elevation="4dp"
     tools:context=".ui.home.cooks_list.cook_detail.CookDetailFragment">
 
-    <TextView
-        android:id="@+id/cook_name_text_view"
-        style="@style/TitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/cook_name_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/address_text_view"
-        style="@style/SubTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/address_text_view"
-        android:textColor="#DD2C00"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cook_name_text_view" />
+        <ImageView
+            android:id="@+id/cook_like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:contentDescription="@string/like_button_text_view"
+            android:src="@drawable/ic_like_button"
+            android:translationZ="4.1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
 
-    <TextView
-        android:id="@+id/email_text_view"
-        style="@style/LinkTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="148dp"
-        android:text="@string/email_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_text_view" />
+        <com.github.captain_miao.optroundcardview.OptRoundCardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="28dp"
+            app:optRoundCardBackgroundColor="#F6F6F9"
+            app:optRoundCardElevation="4dp"
+            app:optRoundCardCornerRadius="30dp"
+            app:optRoundCardLeftBottomCorner="false"
+            app:optRoundCardRightBottomCorner="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/address_text_view"
+                    style="@style/PoppinsRegular12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center"
+                    android:text="@string/address_text_view"
+                    app:drawableStartCompat="@drawable/ic_location" />
+
+                <RatingBar
+                    android:id="@+id/cook_score_rating_bar"
+                    style="@style/AppTheme.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="16dp"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:rating="3.5"
+                    android:scaleX="1.7"
+                    android:scaleY="1.7"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
+
+                <TextView
+                    android:id="@+id/dish_score_text_view"
+                    style="@style/PoppinsRegular12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="8dp"
+                    tools:text="Sin valoraciones" />
+
+                <TextView
+                    style="@style/PoppinsSemibold16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/about_me_text_view" />
+
+                <TextView
+                    android:id="@+id/about_me_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="53dp"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_dishes_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="21dp"
+                    android:paddingEnd="21dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/my_dish_card" />
+            </LinearLayout>
+
+        </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+        <ImageView
+            android:id="@+id/dish_image_view"
+            android:layout_width="283dp"
+            android:layout_height="233dp"
+            android:contentDescription="@string/cook_image_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="216dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:foregroundGravity="center_horizontal"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.27"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dish_image_view">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical"
+                android:showDividers="beginning">
+
+                <TextView
+                    android:id="@+id/cook_name_text_view"
+                    style="@style/PoppinsSemibold18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/cook_name_text_view"
+                    tools:text="@string/cook_name_text_view" />
+
+                <TextView
+                    android:id="@+id/dish_type_text_view"
+                    style="@style/PoppinsLight12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/dish_type_text_view"
+                    tools:text="@string/dish_type_text_view" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

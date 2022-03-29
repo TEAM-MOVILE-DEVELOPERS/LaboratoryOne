@@ -71,10 +71,10 @@
 
         <Button
             android:id="@+id/login_button"
+            style="@style/Buttons"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="18dp"
-            android:textAllCaps="false"
             android:text="@string/login_button"
             tools:ignore="TextContrastCheck" />
 
@@ -92,18 +92,18 @@
                 android:textAlignment="textEnd"
                 android:layout_marginEnd="3dp"
                 android:text="@string/have_an_account_text_view"
-                style="@style/NormalTextView"/>
+                style="@style/PoppinsRegular14" />
 
             <TextView
                 android:id="@+id/register_text_view"
+                style="@style/LinkTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
                 android:layout_weight="1"
                 android:text="@string/register_button"
-                android:textAlignment="textStart"
-                android:layout_marginEnd="3dp"
-                style="@style/LinkTextView"
-                />
+                android:textAlignment="textStart" />
+
         </LinearLayout>
 
         <TextView

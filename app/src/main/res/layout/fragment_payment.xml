@@ -14,7 +14,7 @@
 
     <TextView
         android:id="@+id/title_pay_text_view"
-        style="@style/TitleTextView"
+        style="@style/PoppinsSemibold18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

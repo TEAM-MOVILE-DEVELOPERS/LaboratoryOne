@@ -1,8 +1,6 @@
 package com.juancho1037.umadefoods.ui.home.cooks_list.local_cooks
 
-import androidx.room.ColumnInfo
 import com.juancho1037.umadefoods.UMadeFoods
-import com.juancho1037.umadefoods.ui.home.cooks_list.local_cooks.Cook
 import java.sql.Types
 
 class CookRepository {
@@ -33,7 +31,7 @@ class CookRepository {
 
     suspend fun deleteCook(cook: Cook) {
         val cookDao: CookDao = UMadeFoods.cook_database.CookDao()
-        cookDao.cookDelete(cook)
+        cookDao.deleteCook(cook)
     }
 
     suspend fun loadCook(): ArrayList<Cook> {

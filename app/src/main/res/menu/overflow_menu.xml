@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/login_fragment"
+        android:id="@+id/login_navigation"
         android:icon="@drawable/ic_sign_out"
         android:menuCategory="secondary"
         android:title="@string/sign_out_item" />

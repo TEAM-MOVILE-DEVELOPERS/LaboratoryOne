@@ -2,13 +2,14 @@
 <resources>
     <color name="teal_200">#0D78CD</color>
     <color name="teal_700">#FF018786</color>
+    <color name="light_carmesí">#4CB8A1</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="primary_dark">#FFA000</color>
     <color name="accent">#FF5722</color>
     <color name="primary_text">#212121</color>
-    <color name="secondary_text">#757575</color>
+    <color name="secondary_text">#5E5E5E</color>
     <color name="link_text">#0037FF</color>
-    <color name="shadow">#40000000</color>
+    <color name="shadow">#57000000</color>
 </resources>

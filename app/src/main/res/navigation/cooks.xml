@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cooks"
-    app:startDestination="@id/cooksListFragment">
+    app:startDestination="@id/cookDetailFragment">
 
     <fragment
         android:id="@+id/cooksListFragment"
         android:name="com.juancho1037.umadefoods.ui.home.cooks_list.CooksListFragment"
         android:label="fragment_cooks_list"
-        tools:layout="@layout/fragment_cooks_list" />
+        tools:layout="@layout/fragment_cooks_list">
+        <action
+            android:id="@+id/action_cooksListFragment_to_cookDetailFragment"
+            app:destination="@id/cookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cookDetailFragment"
+        android:name="com.juancho1037.umadefoods.ui.home.cooks_list.cook_detail.CookDetailFragment"
+        android:label="fragment_cook_detail"
+        tools:layout="@layout/fragment_cook_detail" />
 </navigation>

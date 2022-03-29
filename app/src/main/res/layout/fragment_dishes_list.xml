@@ -21,5 +21,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="@integer/material_motion_duration_short_1"
+        tools:listitem="@layout/dish_card" />
 </androidx.constraintlayout.widget.ConstraintLayout>

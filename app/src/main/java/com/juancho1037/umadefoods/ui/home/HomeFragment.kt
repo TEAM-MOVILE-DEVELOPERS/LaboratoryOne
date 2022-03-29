@@ -8,46 +8,67 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commitNow
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentHomeBinding
+import com.juancho1037.umadefoods.ui.home.cooks_list.CooksViewModel
 
 class HomeFragment : Fragment() {
 	private lateinit var homeBinding: FragmentHomeBinding
+	private lateinit var cooksViewModel: CooksViewModel
 	
 	override fun onCreateView(
 		inflater: LayoutInflater , container: ViewGroup? ,
 		savedInstanceState: Bundle?
 	): View {
 		// Inflate the layout for this fragment
-		homeBinding = FragmentHomeBinding.inflate(inflater, container, false)
+		homeBinding = FragmentHomeBinding.inflate(inflater , container , false)
+		cooksViewModel = ViewModelProvider(this)[CooksViewModel::class.java]
 		return homeBinding.root
 	}
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
-		val navGraphsIds = listOf(R.navigation.dishes, R.navigation.cooks)
+		
+		// ---- Setting up de ViewPager + tabs ---- //
+		val navGraphsIds = listOf(R.navigation.dishes , R.navigation.cooks)
 		// Call the view pager component from the layout and assign a childFragmentManager to its adapter property
 		homeBinding.homeViewPager.adapter =
 			HomeAdapter(
-			childFragmentManager,
-			viewLifecycleOwner.lifecycle,
-			navGraphsIds
-		)
-		val labels = listOf(getString(R.string.title_dishes_list), getString(R.string.title_cooks_list))
+				childFragmentManager ,
+				viewLifecycleOwner.lifecycle ,
+				navGraphsIds
+			)
+		val labels =
+			listOf(getString(R.string.title_dishes_list) , getString(R.string.title_cooks_list))
 		val tabLayout = homeBinding.tabLayout
-		val tabLayoutMediator = TabLayoutMediator(tabLayout, homeBinding.homeViewPager) {tab, position ->
-			tab.text = (labels[position])
-		}
+		val tabLayoutMediator =
+			TabLayoutMediator(tabLayout , homeBinding.homeViewPager) { tab , position ->
+				tab.text = (labels[position])
+			}
 		tabLayoutMediator.attach()
+		
+		/*val navController = findNavController()
+		cooksViewModel.loadCooksDone.observe(viewLifecycleOwner) {cook ->
+			cook?.let{
+				navController.navigate(R.id.login_fragment)
+			}
+		}*/
 	}
 	
-	class HomeAdapter(fragmentManager: FragmentManager ,
-	                       lifecycle: Lifecycle ,
-	                       private val navGraphsIds: List<Int>
-	) : FragmentStateAdapter(fragmentManager, lifecycle) {
+	private fun showWelcomeMessage() {
+		TODO("Not yet implemented")
+	}
+	
+	class HomeAdapter(
+		fragmentManager: FragmentManager ,
+		lifecycle: Lifecycle ,
+		private val navGraphsIds: List<Int>
+	) : FragmentStateAdapter(fragmentManager , lifecycle) {
 		
 		override fun getItemCount(): Int = navGraphsIds.size
 		

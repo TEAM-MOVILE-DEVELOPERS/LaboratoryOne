@@ -14,9 +14,9 @@
     <string name="logo_image_view">Logo</string>
 <!--    Fragmento Login-->
     <string name="login_button">Iniciar sesión</string>
-    <string name="register_button"><u>Regístrate</u></string>
+    <string name="register_button">Regístrate</string>
     <string name="have_an_account_text_view">¿No tienes una cuenta?</string>
-    <string name="forgot_password_text_view"> <u> Olvidé mi contraseña</u></string>
+    <string name="forgot_password_text_view">Olvidé mi contraseña</string>
     <string name="create_account_text_view">Crea tu cuenta</string>
 <!--    Fragmento Lista de cocineros-->
     <string name="cook_name_text_view">Nombre del cocinero</string>
@@ -44,7 +44,7 @@
     <string name="location_text_view">Mi ubicación</string>
     <string name="name_chef_text_view">Nombre del Chef</string>
     <string name="cook_rank">Rango del Chef</string>
-<!--    Fragmento Payment-->
+    <!--    Fragmento Payment-->
     <string name="type">Ingrese el tipo de tarjeta:</string>
     <string name="number">Ingrese el número de la tarjeta:</string>
     <string name="date">Ingrese la fecha de expiración:</string>
@@ -52,4 +52,10 @@
     <string name="add">Agregar</string>
     <string name="ejemplo_info">Información de tarjeta</string>
     <string name="add_payment_text_view">Agrega método de pago</string>
+    <string name="cook_image_view">Imagen del cocinero</string>
+    <string name="about_me_text_view">Acerca de mí</string>
+    <string name="like_button_text_view">Botón me gusta</string>
+    <string name="description_text_view">Descripción</string>
+    <string name="add_to_cart_button">Agregar al carrito</string>
+    <string name="my_dish_image_view">Imagen del platillo</string>
 </resources>
