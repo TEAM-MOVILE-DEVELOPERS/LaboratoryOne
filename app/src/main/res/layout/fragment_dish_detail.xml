@@ -11,14 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <CheckBox
             android:id="@+id/dish_like_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
+            android:background="@drawable/like_button_states"
+            android:button="@null"
             android:contentDescription="@string/like_button_text_view"
-            android:src="@drawable/ic_like_button"
-            android:translationZ="4.1dp"
+            android:translationZ="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/cardView"
             app:layout_constraintStart_toEndOf="@+id/cardView"
             app:layout_constraintTop_toTopOf="@+id/cardView" />
@@ -27,7 +28,6 @@
             android:id="@+id/cardView"
             android:layout_width="216dp"
             android:layout_height="51dp"
-            android:layout_marginTop="16dp"
             android:foregroundGravity="center_horizontal"
             app:cardCornerRadius="32dp"
             app:cardElevation="8dp"
@@ -151,8 +151,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/im_login"
             tools:ignore="ImageContrastCheck"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/im_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -37,10 +37,6 @@ class CookDetailFragment : Fragment() {
 			setHasFixedSize(false)
 //			adapter = MyDishesAdapter()
 		}
-		cookDetailBinding.cookLikeButton.setOnClickListener {
-			cookDetailBinding.cookLikeButton.setBackgroundResource(R.drawable.ic_liked_button)
-		}
-		
 	}
 	
 	

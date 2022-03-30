@@ -12,4 +12,5 @@
     <color name="secondary_text">#5E5E5E</color>
     <color name="link_text">#0037FF</color>
     <color name="shadow">#57000000</color>
+    <color name="transparent">#00F44336</color>
 </resources>

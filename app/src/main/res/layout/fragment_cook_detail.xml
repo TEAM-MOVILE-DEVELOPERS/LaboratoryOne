@@ -11,14 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <CheckBox
             android:id="@+id/cook_like_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
+            android:background="@drawable/like_button_states"
+            android:button="@null"
             android:contentDescription="@string/like_button_text_view"
-            android:src="@drawable/ic_like_button"
-            android:translationZ="4.1dp"
+            android:translationZ="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/cardView"
             app:layout_constraintStart_toEndOf="@+id/cardView"
             app:layout_constraintTop_toTopOf="@+id/cardView" />
@@ -28,15 +29,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="28dp"
-            app:optRoundCardBackgroundColor="#F6F6F9"
-            app:optRoundCardElevation="4dp"
-            app:optRoundCardCornerRadius="30dp"
-            app:optRoundCardLeftBottomCorner="false"
-            app:optRoundCardRightBottomCorner="false"
+            android:translationZ="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cardView">
+            app:layout_constraintTop_toTopOf="@+id/cardView"
+            app:optRoundCardBackgroundColor="#F6F6F9"
+            app:optRoundCardCornerRadius="30dp"
+            app:optRoundCardElevation="4dp"
+            app:optRoundCardLeftBottomCorner="false"
+            app:optRoundCardRightBottomCorner="false">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,7 +96,8 @@
                     android:layout_marginStart="53dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="53dp"
-                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du" />
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du"
+                    tools:ignore="HardcodedText" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/my_dishes_recycler_view"
@@ -116,9 +119,12 @@
             android:layout_width="283dp"
             android:layout_height="233dp"
             android:contentDescription="@string/cook_image_view"
+            android:foregroundGravity="fill"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground"
             tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/avatars" />
 
@@ -126,7 +132,6 @@
             android:id="@+id/cardView"
             android:layout_width="216dp"
             android:layout_height="51dp"
-            android:layout_marginTop="16dp"
             android:foregroundGravity="center_horizontal"
             app:cardCornerRadius="32dp"
             app:cardElevation="8dp"
