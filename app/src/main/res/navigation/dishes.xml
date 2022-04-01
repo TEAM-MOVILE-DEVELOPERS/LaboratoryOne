@@ -16,7 +16,11 @@
     </fragment>
     <fragment
         android:id="@+id/dishesDetailFragment"
-        android:name="com.juancho1037.umadefoods.ui.home.dishes_list.dishes_detail.DishesDetailFragment"
+        android:name="com.juancho1037.umadefoods.ui.home.dishes_list.dishes_detail.DishDetailFragment"
         android:label="fragment_dish_detail"
-        tools:layout="@layout/fragment_dish_detail" />
+        tools:layout="@layout/fragment_dish_detail">
+        <argument
+            android:name="dish"
+            app:argType="com.juancho1037.umadefoods.ui.home.dishes_list.local_dishes.Dish" />
+    </fragment>
 </navigation>

@@ -18,5 +18,9 @@
         android:id="@+id/cookDetailFragment"
         android:name="com.juancho1037.umadefoods.ui.home.cooks_list.cook_detail.CookDetailFragment"
         android:label="fragment_cook_detail"
-        tools:layout="@layout/fragment_cook_detail" />
+        tools:layout="@layout/fragment_cook_detail">
+        <argument
+            android:name="cook"
+            app:argType="com.juancho1037.umadefoods.ui.home.cooks_list.local_cooks.Cook" />
+    </fragment>
 </navigation>

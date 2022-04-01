@@ -8,7 +8,7 @@
 
     <color name="primary_dark">#FFA000</color>
     <color name="accent">#FF5722</color>
-    <color name="primary_text">#212121</color>
+    <color name="primary_text">#0F0C0C</color>
     <color name="secondary_text">#5E5E5E</color>
     <color name="link_text">#0037FF</color>
     <color name="shadow">#57000000</color>

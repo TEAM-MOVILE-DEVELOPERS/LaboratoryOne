@@ -11,28 +11,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/dish_image_view"
+            android:layout_width="283dp"
+            android:layout_height="233dp"
+            android:contentDescription="@string/cook_image_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/im_login"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@drawable/im_login" />
+
         <CheckBox
             android:id="@+id/dish_like_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/like_button_states"
             android:button="@null"
             android:contentDescription="@string/like_button_text_view"
             android:translationZ="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/cardView"
-            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/cardView" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="216dp"
-            android:layout_height="51dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/detail_margin_start"
             android:foregroundGravity="center_horizontal"
             app:cardCornerRadius="32dp"
             app:cardElevation="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.27"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dish_image_view">
 
@@ -67,16 +80,16 @@
             android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="28dp"
-            app:optRoundCardBackgroundColor="#F6F6F9"
-            app:optRoundCardElevation="4dp"
-            app:optRoundCardCornerRadius="30dp"
-            app:optRoundCardLeftBottomCorner="false"
-            app:optRoundCardRightBottomCorner="false"
+            android:layout_marginTop="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cardView">
+            app:layout_constraintTop_toTopOf="@+id/cardView"
+            app:optRoundCardBackgroundColor="@color/transparent"
+            app:optRoundCardCornerRadius="30dp"
+            app:optRoundCardElevation="4dp"
+            app:optRoundCardLeftBottomCorner="false"
+            app:optRoundCardRightBottomCorner="false">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,7 +101,7 @@
                     style="@style/AppTheme.RatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="53dp"
+                    android:layout_marginStart="@dimen/detail_margin_start"
                     android:layout_marginTop="48dp"
                     android:isIndicator="true"
                     android:max="5"
@@ -103,30 +116,224 @@
                     style="@style/PoppinsRegular12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="53dp"
+                    android:layout_marginStart="@dimen/detail_margin_start"
                     android:layout_marginTop="8dp"
-                    tools:text="Sin valoraciones" />
+                    android:text="Sin valoraciones" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/detail_margin_start"
+                        android:layout_marginEnd="23dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/PoppinsSemibold16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/description_text_view" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/secondary_text" />
+
+                        <TextView
+                            android:id="@+id/about_me_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/rectangle1"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginTop="83dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="Disponibilidad"
+                                android:textAppearance="@style/PoppinsSemibold16"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="53dp"
                         android:layout_marginTop="12dp"
-                        android:text="@string/description_text_view" />
+                        android:layout_marginEnd="@dimen/detail_margin_start"
+                        android:layout_weight="1"
+                        android:stretchColumns="*">
 
-                    <TextView
-                        android:id="@+id/about_me_text_view"
-                        android:layout_width="160dp"
-                        android:layout_height="66dp"
-                        android:layout_marginStart="53dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="53dp"
-                        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du" />
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/PoppinsSemibold16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:text="Valor nutricional" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="2dp"
+                            android:background="@color/secondary_text" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Proteinas" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2.5g"
+                                android:textAlignment="textEnd" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Carbohidratos" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14.7g"
+                                android:textAlignment="textEnd" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sodio" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="19%*"
+                                android:textAlignment="textEnd" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Potasio" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5%*"
+                                android:textAlignment="textEnd" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:text="Rico en Vitaminas A, C y B3" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="2dp"
+                            android:background="@color/secondary_text" />
+
+                        <!-- Portion size -->
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/calories_text_view"
+                                style="@style/PoppinsRegular9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="145 cal"
+                                app:drawableStartCompat="@drawable/ic_fire" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*Valor diario"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="end"
+
+                                />
+                        </TableRow>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/relativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:background="@drawable/rectangle1">
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tamaño de porción"
+                                android:textAppearance="@style/PoppinsSemibold16"
+                                android:textSize="11sp"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </TableLayout>
 
                 </LinearLayout>
 
@@ -142,18 +349,6 @@
             </LinearLayout>
 
         </com.github.captain_miao.optroundcardview.OptRoundCardView>
-
-        <ImageView
-            android:id="@+id/dish_image_view"
-            android:layout_width="283dp"
-            android:layout_height="233dp"
-            android:contentDescription="@string/cook_image_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/im_login"
-            tools:ignore="ImageContrastCheck"
-            tools:src="@drawable/im_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -9,40 +9,44 @@ import com.juancho1037.umadefoods.databinding.CookCardBinding
 import com.juancho1037.umadefoods.ui.home.cooks_list.local_cooks.Cook
 
 class CooksAdapter(
-    private val cooksList: ArrayList<Cook>
-):RecyclerView.Adapter<CooksAdapter.CooksViewHolder>(){
-
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): CooksViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.cook_card,parent,false)
-        return CooksViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: CooksViewHolder, position: Int) {
-        val cook = cooksList[position]
-        holder.bind(cook)
-    }
-
-    override fun getItemCount(): Int = cooksList.size
-
-    fun appendItems(newList: ArrayList<Cook>){
-        cooksList.clear()
-        cooksList.addAll(newList)
-        notifyDataSetChanged()
-    }
-
-    class CooksViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        private val binding = CookCardBinding.bind(itemView)
-        fun bind(cook: Cook){
-            with(binding){
-                rankeTextView.text = cook.rank
-                nameChefTextView.text = cook.cook_name
-                typeDish.text = cook.food_kind
-                LocationTextView.text = cook.location
-            }
-        }
-    }
+	private val cooksList: ArrayList<Cook> ,
+	// Unit significa que Movie puede ser de cualquier tipo
+	private val onItemClicked: (Cook) -> Unit
+) : RecyclerView.Adapter<CooksAdapter.CookViewHolder>() {
+	
+	override fun onCreateViewHolder(
+		parent: ViewGroup ,
+		viewType: Int
+	): CookViewHolder {
+		val itemView =
+			LayoutInflater.from(parent.context).inflate(R.layout.cook_card , parent , false)
+		return CookViewHolder(itemView)
+	}
+	
+	override fun onBindViewHolder(cookViewHolder: CookViewHolder , position: Int) {
+		val cook = cooksList[position]
+		cookViewHolder.bindCook(cook)
+		cookViewHolder.itemView.setOnClickListener { onItemClicked(cooksList[position]) }
+	}
+	
+	override fun getItemCount(): Int = cooksList.size
+	
+	fun appendItems(newList: ArrayList<Cook>) {
+		// Para pedirle al backend que envíe listas nuevas
+		cooksList.clear()
+		cooksList.addAll(newList)
+		notifyDataSetChanged()
+	}
+	
+	class CookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+		private val cookCardBinding = CookCardBinding.bind(itemView)
+		fun bindCook(cook: Cook) {
+			with(cookCardBinding) {
+				rankTextView.text = cook.rank
+				nameChefTextView.text = cook.cook_name
+				typeDish.text = cook.food_kind
+				LocationTextView.text = cook.location
+			}
+		}
+	}
 }

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentCookDetailBinding
 import com.juancho1037.umadefoods.ui.home.cooks_list.CooksViewModel
+import com.juancho1037.umadefoods.ui.home.dishes_list.DishesAdapter
 
 class CookDetailFragment : Fragment() {
 	private lateinit var cookDetailBinding: FragmentCookDetailBinding
@@ -35,7 +36,8 @@ class CookDetailFragment : Fragment() {
 				false
 			)
 			setHasFixedSize(false)
-//			adapter = MyDishesAdapter()
+			// Pasar los platos sólo del cocinero aquí
+//			adapter = DishesAdapter(array de los platos del cocinero)
 		}
 	}
 	

@@ -6,22 +6,22 @@ import java.sql.Types
 class CookRepository {
 
     suspend fun saveCook(
-        rank: String,
-        cook_name: String,
-        food_kind: String,
-        location: String,
-
-    ){
-        val cook = Cook(
-            id = Types.NULL,
-            rank = rank,
-            cook_name = cook_name,
-            food_kind = food_kind,
-            location = location
-        )
-
-        val cookDao: CookDao = UMadeFoods.cook_database.CookDao()
-        cookDao.saveCook(cook)
+	    cook_name: String ,
+	    rank: String ,
+	    food_kind: String ,
+	    location: String ,
+	
+	    ) {
+	    val cook = Cook(
+		    id = Types.NULL ,
+		    cook_name = cook_name ,
+		    rank = rank ,
+		    food_kind = food_kind ,
+		    location = location
+	    )
+	
+	    val cookDao: CookDao = UMadeFoods.cook_database.CookDao()
+	    cookDao.saveCook(cook)
     }
 
     suspend fun searchDish(nameCook: String): Cook {
