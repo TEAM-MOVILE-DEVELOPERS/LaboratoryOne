@@ -18,6 +18,7 @@
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/fullname_user_logo.xml" value="0.357" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/ic_address.xml" value="0.3695" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/ic_email.xml" value="0.3695" />
+        <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/ic_fast_clock.xml" value="0.338" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/ic_favorites.xml" value="0.1715" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/ic_fire.xml" value="0.3695" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3695" />
@@ -38,6 +39,8 @@
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/logop.xml" value="0.3695" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/password_logo.xml" value="0.3695" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/rectangle1.xml" value="0.3695" />
+        <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/rectangle2.xml" value="0.3695" />
+        <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/drawable/transparent_divider.xml" value="0.3695" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/font-v26/sansation_bold.xml" value="0.39895833333333336" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/font/poppins_regular.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/font/poppins_semibold.xml" value="0.30520833333333336" />
@@ -60,7 +63,7 @@
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_cooks_list.xml" value="0.3499308437067773" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_dashboard.xml" value="0.36875" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_delete.xml" value="0.36875" />
-        <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_dish_detail.xml" value="0.44290123456790126" />
+        <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_dish_detail.xml" value="0.4108416547788873" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_dishes_list.xml" value="0.36875" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_favorites.xml" value="0.11538461538461539" />
         <entry key="..\:/Users/Camilo/AndroidStudioProjects/UMadeFoods/app/src/main/res/layout/fragment_fullscreen.xml" value="0.3630769230769231" />

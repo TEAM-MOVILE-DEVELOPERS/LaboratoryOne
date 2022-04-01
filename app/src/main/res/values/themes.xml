@@ -67,8 +67,8 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="PoppinsRegular9" parent="PoppinsRegular14">
-        <item name="android:textSize">9sp</item>
+    <style name="PoppinsRegular11" parent="PoppinsRegular14">
+        <item name="android:textSize">11sp</item>
     </style>
 
     <style name="LinkTextView" parent="PoppinsRegular14">
