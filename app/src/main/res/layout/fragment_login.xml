@@ -76,6 +76,7 @@
             android:layout_height="match_parent"
             android:layout_margin="18dp"
             android:text="@string/login_button"
+            android:background="@drawable/principal_button"
             tools:ignore="TextContrastCheck" />
 
         <LinearLayout

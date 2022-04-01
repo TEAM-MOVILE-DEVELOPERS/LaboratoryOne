@@ -98,27 +98,51 @@
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp">
 
-                <RatingBar
-                    android:id="@+id/dish_score_rating_bar"
-                    style="@style/AppTheme.RatingBar"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="48dp"
-                    android:isIndicator="true"
-                    android:max="5"
-                    android:rating="3.5"
-                    android:scaleX="1.7"
-                    android:scaleY="1.7"
-                    android:transformPivotX="0dp"
-                    android:transformPivotY="0dp" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/dish_score_text_view"
-                    style="@style/PoppinsRegular12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Sin valoraciones" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <RatingBar
+                            android:id="@+id/dish_score_rating_bar"
+                            style="@style/AppTheme.RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:max="5"
+                            android:rating="3.5"
+                            android:scaleX="1.7"
+                            android:scaleY="1.7"
+                            android:transformPivotX="0dp"
+                            android:transformPivotY="0dp" />
+
+                        <TextView
+                            android:id="@+id/dish_score_text_view"
+                            style="@style/PoppinsRegular12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Sin valoraciones" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/cost_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|end"
+                        android:text="Precio:   $ 5000"
+                        android:textAppearance="@style/PoppinsRegular14"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -389,6 +413,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -398,8 +423,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/rectangle2"
                         android:gravity="center"
-                        android:paddingHorizontal="5dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="5dp">
 
                         <TextView
                             android:id="@+id/minus_text_view"
@@ -442,6 +467,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Disponibles 5"
                         android:textAppearance="@style/PoppinsLight14"
                         android:textSize="16sp" />
@@ -453,9 +479,11 @@
                     style="@style/Buttons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="14dp"
                     android:layout_gravity="center"
                     android:text="@string/add_to_cart_button"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck"
+                    android:background="@drawable/principal_button" />
 
             </LinearLayout>
 

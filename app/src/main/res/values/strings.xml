@@ -20,7 +20,7 @@
     <string name="create_account_text_view">Crea tu cuenta</string>
 <!--    Fragmento Lista de cocineros-->
     <string name="cook_name_text_view">Nombre del cocinero</string>
-    <string name="address_text_view">Dirección</string>
+    <string name="location_text_view">Ubicación</string>
     <string name="email_text_view">Correo electrónico</string>
 <!--    Fragmento Detalle del plato -->
     <string name="dish_name_text_view">Nombre del platillo</string>
@@ -41,7 +41,6 @@
     <string name="made_by_text_view">Hecho por …</string>
     <string name="price_text_view">$ Precio</string>
     <string name="preparation_time_text_view">30 – 45 min</string>
-    <string name="location_text_view">Mi ubicación</string>
     <string name="name_chef_text_view">Nombre del Chef</string>
     <string name="cook_rank">Rango del Chef</string>
     <!--    Fragmento Payment-->
