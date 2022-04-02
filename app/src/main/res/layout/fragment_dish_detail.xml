@@ -107,8 +107,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <RatingBar
                             android:id="@+id/dish_score_rating_bar"
@@ -148,275 +148,270 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:divider="@drawable/transparent_divider"
-                    android:orientation="horizontal"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="8dp"
-                    android:showDividers="middle">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        style="@style/PoppinsSemibold16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description_text_view" />
+
+                    <View
                         android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/secondary_text_icons" />
+
+                    <TextView
+                        android:id="@+id/description_text_view"
+                        style="@style/PoppinsRegular11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:shadowRadius="0"
+                        android:text="ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du asdf asdfasdfasg asdfasdf a   asdasd a asdfadf"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_gravity="bottom|center"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/rectangle1">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:text="Disponibilidad"
+                            android:textAppearance="@style/PoppinsSemibold16"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/preparation_time_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:drawablePadding="4dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/preparation_time_text_view"
+                            android:textAppearance="@style/PoppinsRegular11"
+                            app:drawableStartCompat="@drawable/ic_fast_clock"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView5"
+                            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
 
                         <TextView
                             style="@style/PoppinsSemibold16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/description_text_view" />
-
-                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/secondary_text_icons" />
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="@string/nutritional_value_text_view" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="2dp"
+                        android:background="@color/secondary_text_icons" />
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp">
 
                         <TextView
-                            android:id="@+id/description_text_view"
                             style="@style/PoppinsRegular11"
-                            android:layout_width="match_parent"
-                            android:layout_height="133dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:shadowRadius="0"
-                            android:text="ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du asdf asdfasdfasg asdfasdf a   asdasd a asdfadf"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/proteins_title" />
+
+                        <TextView
+                            android:id="@+id/proteins_text_view"
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="@string/proteins_text_view"
+                            android:textAlignment="textEnd" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="Carbohidratos"
                             tools:ignore="HardcodedText" />
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <TextView
+                            android:id="@+id/carbohydrates_text_view"
+                            style="@style/PoppinsRegular11"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="bottom">
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="@string/carbohydrates_text_view"
+                            android:textAlignment="textEnd" />
+                    </TableRow>
 
-                            <TextView
-                                android:id="@+id/textView5"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/rectangle1"
-                                android:gravity="center_vertical"
-                                android:paddingHorizontal="10dp"
-                                android:text="Disponibilidad"
-                                android:textAppearance="@style/PoppinsSemibold16"
-                                android:textSize="11sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                tools:ignore="HardcodedText" />
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
 
-                            <TextView
-                                android:id="@+id/preparation_time_text_view"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="center_vertical"
-                                android:text="@string/preparation_time_text_view"
-                                android:drawablePadding="4dp"
-                                android:textAppearance="@style/PoppinsRegular11"
-                                app:drawableStartCompat="@drawable/ic_fast_clock"
-                                app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/textView5" />
+                        <TextView
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="Sodio"
+                            tools:ignore="HardcodedText" />
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:id="@+id/sodium_text_view"
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="@string/sodium_text_view"
+                            android:textAlignment="textEnd" />
+                    </TableRow>
 
-                    </LinearLayout>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
 
-                    <TableLayout
-                        android:layout_width="match_parent"
+                        <TextView
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="Potasio"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/potassium_text_view"
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowRadius="0"
+                            android:text="@string/potassium_text_view"
+                            android:textAlignment="textEnd" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/vitamins_text_view"
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:shadowRadius="0"
+                            android:text="@string/vitamins_text_view" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="2dp"
+                        android:background="@color/secondary_text_icons" />
+
+                    <!-- Portion size -->
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/calories_text_view"
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:shadowRadius="0"
+                            android:text="@string/calories_text_view"
+                            app:drawableStartCompat="@drawable/ic_fire"
+                            app:emojiCompatEnabled="true" />
+
+                        <TextView
+                            style="@style/PoppinsRegular11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="end"
+                            android:shadowRadius="0"
+                            android:text="*Valor diario"
+                            tools:ignore="HardcodedText" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="8dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/rectangle1">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stretchColumns="*">
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:text="Tamaño de porción"
+                        android:textAppearance="@style/PoppinsSemibold16"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
 
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                style="@style/PoppinsSemibold16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_span="2"
-                                android:text="@string/nutritional_value_text_view" />
-                        </TableRow>
-
-                        <View
-                            android:layout_height="2dp"
-                            android:background="@color/secondary_text_icons" />
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="8dp">
-
-                            <TextView
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="@string/proteins_title" />
-
-                            <TextView
-                                android:id="@+id/proteins_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="@string/proteins_text_view"
-                                android:textAlignment="textEnd" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="Carbohidratos"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/carbohydrates_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="@string/carbohydrates_text_view"
-                                android:textAlignment="textEnd" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="Sodio"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/sodium_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="@string/sodium_text_view"
-                                android:textAlignment="textEnd" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="Potasio"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/potassium_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:shadowRadius="0"
-                                android:text="@string/potassium_text_view"
-                                android:textAlignment="textEnd" />
-
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="8dp">
-
-                            <TextView
-                                android:id="@+id/vitamins_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_span="2"
-                                android:shadowRadius="0"
-                                android:text="@string/vitamins_text_view" />
-                        </TableRow>
-
-                        <View
-                            android:layout_height="2dp"
-                            android:background="@color/secondary_text_icons" />
-
-                        <!-- Portion size -->
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="8dp">
-
-                            <TextView
-                                android:id="@+id/calories_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_vertical"
-                                android:shadowRadius="0"
-                                android:text="@string/calories_text_view"
-                                app:drawableStartCompat="@drawable/ic_fire"
-                                app:emojiCompatEnabled="true" />
-
-                            <TextView
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:gravity="end"
-                                android:shadowRadius="0"
-                                android:text="*Valor diario"
-                                tools:ignore="HardcodedText" />
-                        </TableRow>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="bottom"
-                            android:layout_marginTop="8dp">
-
-                            <TextView
-                                android:id="@+id/textView13"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/rectangle1"
-                                android:gravity="center_vertical"
-                                android:paddingHorizontal="10dp"
-                                android:text="Tamaño de porción"
-                                android:textAppearance="@style/PoppinsSemibold16"
-                                android:textSize="11sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="1.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/portion_size_text_view"
-                                style="@style/PoppinsRegular11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/portion_size_text_view"
-                                app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
-                                app:layout_constraintEnd_toEndOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </TableLayout>
-
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/portion_size_text_view"
+                        style="@style/PoppinsRegular11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/portion_size_text_view"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView13" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -430,19 +425,19 @@
                         android:layout_width="128dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:weightSum="3"
                         android:background="@drawable/rectangle2"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:paddingHorizontal="5dp">
+                        android:paddingHorizontal="5dp"
+                        android:weightSum="3">
 
                         <TextView
                             android:id="@+id/minus_text_view"
                             style="@style/PoppinsLight14"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:paddingTop="3sp"
                             android:text="@string/minus_text_view"
                             android:textColor="#F44336"
@@ -453,9 +448,9 @@
                             style="@style/PoppinsLight14"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:paddingTop="3sp"
-                            android:layout_weight="1"
                             android:text="1"
                             android:textColor="#F44336"
                             android:textSize="21sp"
@@ -466,8 +461,8 @@
                             style="@style/PoppinsLight14"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:paddingTop="3sp"
                             android:text="@string/plus_text_view"
                             android:textColor="#F44336"
@@ -491,11 +486,11 @@
                     style="@style/Buttons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="14dp"
                     android:layout_gravity="center"
+                    android:layout_marginVertical="14dp"
+                    android:background="@drawable/principal_button"
                     android:text="@string/add_to_cart_button"
-                    tools:ignore="TextContrastCheck"
-                    android:background="@drawable/principal_button" />
+                    tools:ignore="TextContrastCheck" />
 
             </LinearLayout>
 
