@@ -9,8 +9,9 @@
     <color name="primary_dark">#FFA000</color>
     <color name="accent">#FF5722</color>
     <color name="primary_text">#0F0C0C</color>
-    <color name="secondary_text">#5E5E5E</color>
+    <color name="secondary_text_icons">#5E5E5E</color>
     <color name="link_text">#0037FF</color>
     <color name="shadow">#57000000</color>
     <color name="transparent">#00F44336</color>
+    <color name="divider">#CAC8DA</color>
 </resources>

@@ -23,7 +23,7 @@ class ProfileFragment : Fragment() {
 		super.onViewCreated(view , savedInstanceState)
 		
 		with(profileBinding) {
-			paymentTextView.setOnClickListener {
+			paymentMethodsLayout.setOnClickListener {
 				findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToPaymentFragment())
 			}
 		}

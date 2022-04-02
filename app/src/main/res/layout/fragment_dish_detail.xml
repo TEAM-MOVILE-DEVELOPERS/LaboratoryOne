@@ -124,12 +124,13 @@
                             android:transformPivotY="0dp" />
 
                         <TextView
-                            android:id="@+id/dish_score_text_view"
-                            style="@style/PoppinsRegular12"
+                            android:id="@+id/cook_score_text_view"
+                            style="@style/PoppinsRegular18"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Sin valoraciones" />
+                            android:text="@string/dish_score_text_view"
+                            app:drawableEndCompat="@drawable/ic_star" />
                     </LinearLayout>
 
                     <TextView
@@ -138,7 +139,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_vertical|end"
-                        android:text="Precio:   $ 5000"
+                        android:text="@string/cost_text_view"
                         android:textAppearance="@style/PoppinsRegular14"
                         android:textSize="18sp" />
 
@@ -169,10 +170,10 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
-                            android:background="@color/secondary_text" />
+                            android:background="@color/secondary_text_icons" />
 
                         <TextView
-                            android:id="@+id/about_me_text_view"
+                            android:id="@+id/description_text_view"
                             style="@style/PoppinsRegular11"
                             android:layout_width="match_parent"
                             android:layout_height="133dp"
@@ -180,7 +181,8 @@
                             android:shadowRadius="0"
                             android:text="ipsum dolor sit amet, consectetur adipiscing elit. Urna et morbi pharetra ultrices venenatis ut nibh. Volutpat et adipiscing tellus quis ultrices sed vulputate. Blandit du asdf asdfasdfasg asdfasdf a   asdasd a asdfadf"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="HardcodedText" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -199,15 +201,16 @@
                                 android:textSize="11sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="HardcodedText" />
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/preparation_time_text_view"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
                                 android:gravity="center_vertical"
-                                android:text="30 min"
+                                android:text="@string/preparation_time_text_view"
                                 android:drawablePadding="4dp"
                                 android:textAppearance="@style/PoppinsRegular11"
                                 app:drawableStartCompat="@drawable/ic_fast_clock"
@@ -234,12 +237,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_span="2"
-                                android:text="Valor nutricional" />
+                                android:text="@string/nutritional_value_text_view" />
                         </TableRow>
 
                         <View
                             android:layout_height="2dp"
-                            android:background="@color/secondary_text" />
+                            android:background="@color/secondary_text_icons" />
 
                         <TableRow
                             android:layout_width="match_parent"
@@ -251,15 +254,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="Proteinas" />
+                                android:text="@string/proteins_title" />
 
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/proteins_text_view"
                                 style="@style/PoppinsRegular11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="2.5g"
+                                android:text="@string/proteins_text_view"
                                 android:textAlignment="textEnd" />
                         </TableRow>
 
@@ -272,15 +275,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="Carbohidratos" />
+                                android:text="Carbohidratos"
+                                tools:ignore="HardcodedText" />
 
                             <TextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/carbohydrates_text_view"
                                 style="@style/PoppinsRegular11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="14.7g"
+                                android:text="@string/carbohydrates_text_view"
                                 android:textAlignment="textEnd" />
                         </TableRow>
 
@@ -293,15 +297,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="Sodio" />
+                                android:text="Sodio"
+                                tools:ignore="HardcodedText" />
 
                             <TextView
-                                android:id="@+id/textView9"
+                                android:id="@+id/sodium_text_view"
                                 style="@style/PoppinsRegular11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="19%*"
+                                android:text="@string/sodium_text_view"
                                 android:textAlignment="textEnd" />
                         </TableRow>
 
@@ -314,15 +319,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="Potasio" />
+                                android:text="Potasio"
+                                tools:ignore="HardcodedText" />
 
                             <TextView
-                                android:id="@+id/textView10"
+                                android:id="@+id/potassium_text_view"
                                 style="@style/PoppinsRegular11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:shadowRadius="0"
-                                android:text="5%*"
+                                android:text="@string/potassium_text_view"
                                 android:textAlignment="textEnd" />
 
                         </TableRow>
@@ -333,17 +339,18 @@
                             android:layout_marginBottom="8dp">
 
                             <TextView
+                                android:id="@+id/vitamins_text_view"
                                 style="@style/PoppinsRegular11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_span="2"
                                 android:shadowRadius="0"
-                                android:text="Rico en Vitaminas A, C y B3" />
+                                android:text="@string/vitamins_text_view" />
                         </TableRow>
 
                         <View
                             android:layout_height="2dp"
-                            android:background="@color/secondary_text" />
+                            android:background="@color/secondary_text_icons" />
 
                         <!-- Portion size -->
                         <TableRow
@@ -358,7 +365,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_vertical"
                                 android:shadowRadius="0"
-                                android:text="145 cal"
+                                android:text="@string/calories_text_view"
                                 app:drawableStartCompat="@drawable/ic_fire"
                                 app:emojiCompatEnabled="true" />
 
@@ -368,9 +375,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:gravity="end"
-
                                 android:shadowRadius="0"
-                                android:text="*Valor diario" />
+                                android:text="*Valor diario"
+                                tools:ignore="HardcodedText" />
                         </TableRow>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -392,14 +399,16 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="1.0"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="HardcodedText" />
 
                             <TextView
+                                android:id="@+id/portion_size_text_view"
+                                style="@style/PoppinsRegular11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
-                                android:text="250g"
-                                style="@style/PoppinsRegular11"
+                                android:text="@string/portion_size_text_view"
                                 app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
                                 app:layout_constraintEnd_toEndOf="parent" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -421,6 +430,7 @@
                         android:layout_width="128dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:weightSum="3"
                         android:background="@drawable/rectangle2"
                         android:gravity="center"
                         android:orientation="horizontal"
@@ -429,35 +439,37 @@
                         <TextView
                             android:id="@+id/minus_text_view"
                             style="@style/PoppinsLight14"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_weight="1"
                             android:paddingTop="3sp"
-                            android:text="-"
+                            android:text="@string/minus_text_view"
                             android:textColor="#F44336"
-                            android:textSize="21sp" />
+                            android:textSize="21sp"
+                            tools:ignore="NestedWeights" />
 
                         <TextView
                             style="@style/PoppinsLight14"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:gravity="center"
                             android:paddingTop="3sp"
+                            android:layout_weight="1"
                             android:text="1"
                             android:textColor="#F44336"
-                            android:textSize="21sp" />
+                            android:textSize="21sp"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/plus_text_view"
                             style="@style/PoppinsLight14"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_weight="1"
                             android:paddingTop="3sp"
-                            android:text="+"
+                            android:text="@string/plus_text_view"
                             android:textColor="#F44336"
                             android:textSize="21sp" />
                     </LinearLayout>
@@ -468,7 +480,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Disponibles 5"
+                        android:text="@string/available_text_view"
                         android:textAppearance="@style/PoppinsLight14"
                         android:textSize="16sp" />
 

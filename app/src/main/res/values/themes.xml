@@ -39,12 +39,23 @@
 
     <style name="PoppinsSemibold16" parent="PoppinsSemibold18">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textColor">@color/secondary_text_icons</item>
     </style>
 
     <style name="PoppinsLight14" parent="@android:style/TextAppearance">
         <item name="fontFamily">@font/poppins_light</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="PoppinsLight12" parent="PoppinsLight14">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">.03</item>
+    </style>
+
+    <style name="PoppinsMedium16" parent="@android:style/TextAppearance">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/primary_text</item>
     </style>
 
@@ -59,13 +70,13 @@
         <item name="android:shadowRadius">12</item>
     </style>
 
-    <style name="PoppinsLight12" parent="PoppinsLight14">
-        <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">.03</item>
-    </style>
 
     <style name="PoppinsRegular12" parent="PoppinsRegular14">
         <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="PoppinsRegular18" parent="PoppinsRegular14">
+        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="PoppinsRegular11" parent="PoppinsRegular14">
@@ -78,6 +89,12 @@
         <item name="android:shadowColor">@color/shadow</item>
         <item name="android:shadowDy">10</item>
         <item name="android:shadowRadius">12</item>
+    </style>
+
+    <style name="PoppinsRoboto14" parent="@android:style/TextAppearance">
+        <item name="fontFamily">@font/roboto_condensed_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/secondary_text_icons</item>
     </style>
 
     <style name="RoundPhotos" parent="">
@@ -97,7 +114,7 @@
 
     <!-- RatingBar Theme -->
     <style name="AppTheme.RatingBar" parent="android:style/Widget.Material.RatingBar.Small">
-        <item name="colorControlNormal">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/secondary_text_icons</item>
         <item name="colorControlActivated">@color/primary_dark</item>
         <item name="minHeight">20dp</item>
         <item name="maxHeight">50dp</item>
@@ -120,7 +137,7 @@
 
     <style name="location_style">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textColor">@color/secondary_text_icons</item>
         <item name="android:shadowColor">@color/shadow</item>
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">4</item>

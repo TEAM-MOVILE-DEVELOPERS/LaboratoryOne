@@ -40,7 +40,7 @@
     <string name="dish_type_text_view">Tipo de Platillo</string>
     <string name="made_by_text_view">Hecho por …</string>
     <string name="price_text_view">$ Precio</string>
-    <string name="preparation_time_text_view">30 – 45 min</string>
+    <string name="preparation_time_text_view">45 min</string>
     <string name="name_chef_text_view">Nombre del Chef</string>
     <string name="cook_rank">Rango del Chef</string>
     <!--    Fragmento Payment-->
@@ -57,4 +57,23 @@
     <string name="description_text_view">Descripción</string>
     <string name="add_to_cart_button">Agregar al carrito</string>
     <string name="my_dish_image_view">Imagen del platillo</string>
+    <string name="dish_score_text_view">3.5</string>
+    <string name="cost_text_view">Precio: $ 5000</string>
+    <string name="nutritional_value_text_view">Valor nutricional</string>
+    <string name="proteins_text_view">2.5g</string>
+    <string name="proteins_title">Proteinas</string>
+    <string name="carbohydrates_text_view">14.7g</string>
+    <string name="sodium_text_view">19%*</string>
+    <string name="potassium_text_view">5%*</string>
+    <string name="vitamins_text_view">Rico en Vitaminas A, C y B3</string>
+    <string name="calories_text_view">145 cal</string>
+    <string name="portion_size_text_view">250g</string>
+    <string name="minus_text_view">-</string>
+    <string name="plus_text_view">+</string>
+    <string name="available_text_view">Disponibles 5</string>
+    <string name="cook_score_text_view">3.5</string>
+    <string name="credit_card_icon">Ícono de tarjeta de crédito</string>
+    <string name="im_kneding_bread">Imagen de amasar pan</string>
+    <string name="dish_icon">Ícono de sopa</string>
+    <string name="title_my_dishes">Mis platos</string>
 </resources>
