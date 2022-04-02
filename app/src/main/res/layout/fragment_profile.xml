@@ -25,9 +25,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:contentDescription="@string/dish_icon"
-            app:layout_constraintBottom_toBottomOf="@+id/go_to_my_dishes_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_go_to_my_dishes"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/go_to_my_dishes_icon" />
+            app:layout_constraintTop_toTopOf="@+id/ic_go_to_my_dishes" />
 
         <TextView
             android:layout_width="0dp"
@@ -46,19 +46,20 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
             android:layout_marginBottom="8dp"
-            android:text="Agregar tarjetas de Crédito/Débito"
+            android:text="Agrega o modifica tus platos"
             android:textAppearance="@style/PoppinsLight14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.307"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/go_to_my_dishes_icon"
+            android:id="@+id/ic_go_to_my_dishes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="33dp"
-            android:contentDescription="Ir a mis platos"
+            android:contentDescription="@string/ic_go_to_my_dishes"
             android:src="@drawable/ic_navigate_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +76,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/payment_methods_layout"
+        android:id="@+id/edit_profile_layout"
         android:layout_width="match_parent"
         android:layout_height="62dp">
 
@@ -83,11 +84,73 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:contentDescription="@string/ic_person"
+            android:src="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_go_to_edit_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ic_go_to_edit_profile" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/title_edit_profile"
+            android:textAppearance="@style/PoppinsMedium16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="8dp"
+            android:text="Modifica la información de tu cuenta"
+            android:textAppearance="@style/PoppinsLight14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/ic_go_to_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:contentDescription="@string/ic_go_to_edit_profile"
+            android:src="@drawable/ic_navigate_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="52dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/payment_methods_layout"
+        android:layout_width="match_parent"
+        android:layout_height="62dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
             android:contentDescription="@string/credit_card_icon"
             android:src="@drawable/ic_credit_card"
-            app:layout_constraintBottom_toBottomOf="@+id/go_to_payment_methods_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_go_to_payment_methods"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/go_to_payment_methods_icon" />
+            app:layout_constraintTop_toTopOf="@+id/ic_go_to_payment_methods" />
 
         <TextView
             android:layout_width="0dp"
@@ -106,19 +169,143 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
             android:layout_marginBottom="8dp"
-            android:text="Agregar tarjetas de Crédito/Débito"
+            android:text="Agrega tus tarjetas de Crédito/Débito"
             android:textAppearance="@style/PoppinsLight14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.307"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/go_to_payment_methods_icon"
+            android:id="@+id/ic_go_to_payment_methods"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="33dp"
-            android:contentDescription="Ir a métodos de pago"
+            android:contentDescription="@string/ic_go_to_payment_methods"
+            android:src="@drawable/ic_navigate_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="52dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="62dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/credit_card_icon"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_go_to_locations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ic_go_to_locations" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/title_locations"
+            android:textAppearance="@style/PoppinsMedium16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="8dp"
+            android:text="Agrega o elimina ubicaciones de entrega"
+            android:textAppearance="@style/PoppinsLight14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/ic_go_to_locations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:contentDescription="@string/ic_go_to_locations"
+            android:src="@drawable/ic_navigate_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="52dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/social_networks_layout"
+        android:layout_width="match_parent"
+        android:layout_height="62dp">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="22dp"
+            android:contentDescription="@string/credit_card_icon"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_go_to_social_networks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ic_go_to_social_networks" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/title_social_networks"
+            android:textAppearance="@style/PoppinsMedium16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="8dp"
+            android:text="Agregar Facebook, Twitter etc "
+            android:textAppearance="@style/PoppinsLight14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/ic_go_to_social_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:contentDescription="@string/ic_go_to_social_networks"
             android:src="@drawable/ic_navigate_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -76,4 +76,13 @@
     <string name="im_kneding_bread">Imagen de amasar pan</string>
     <string name="dish_icon">Ícono de sopa</string>
     <string name="title_my_dishes">Mis platos</string>
+    <string name="ic_person">Ícono editar perfil</string>
+    <string name="title_edit_profile">Editar perfil</string>
+    <string name="title_locations">Ubicaciones</string>
+    <string name="title_social_networks">Redes sociales</string>
+    <string name="ic_go_to_my_dishes">Ir a mis platos</string>
+    <string name="ic_go_to_edit_profile">Ir a editar perfil</string>
+    <string name="ic_go_to_payment_methods">Ir a métodos de pago</string>
+    <string name="ic_go_to_locations">Ir a ubicaciones de entrega</string>
+    <string name="ic_go_to_social_networks">Ir a tus redes sociales</string>
 </resources>
