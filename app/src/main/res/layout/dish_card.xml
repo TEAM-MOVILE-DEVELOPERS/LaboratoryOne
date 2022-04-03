@@ -26,7 +26,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/type_dish_textview"
+            android:id="@+id/dish_type_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -44,7 +44,7 @@
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/name_textview"
+            android:id="@+id/dish_name_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -56,10 +56,10 @@
             android:textAppearance="@style/name_dish_style"
             app:layout_constraintEnd_toStartOf="@+id/im_upload"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/type_dish_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/dish_type_text_view" />
 
         <TextView
-            android:id="@+id/made_textview"
+            android:id="@+id/cook_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -68,14 +68,14 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="25dp"
             android:layout_marginTop="4dp"
-            android:text="@string/made_by_text_view"
+            android:text="@string/cook_name_text_view"
             android:textAppearance="@style/made_for_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_textview"
+            app:layout_constraintTop_toBottomOf="@+id/dish_name_text_view"
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/price_textview"
+            android:id="@+id/cost_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -84,14 +84,14 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="25dp"
             android:layout_marginTop="4dp"
-            android:text="@string/price_text_view"
+            android:text="@string/cost_text_view"
             android:textAppearance="@style/price_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/made_textview"
+            app:layout_constraintTop_toBottomOf="@+id/cook_name_text_view"
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/time_preparation_textview"
+            android:id="@+id/preparation_time_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -102,8 +102,9 @@
             android:layout_marginTop="4dp"
             android:text="@string/preparation_time_text_view"
             android:textAppearance="@style/preparation_time_style"
+            app:drawableStartCompat="@drawable/ic_fast_clock"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/price_textview"
+            app:layout_constraintTop_toBottomOf="@+id/cost_text_view"
             tools:ignore="TextContrastCheck" />
 
         <RatingBar
@@ -117,7 +118,7 @@
             android:numStars="5"
             android:theme="@style/AppTheme.RatingBar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/time_preparation_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/preparation_time_text_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

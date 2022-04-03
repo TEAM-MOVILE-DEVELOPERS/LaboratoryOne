@@ -7,11 +7,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.ActivityMainBinding
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.*
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 		navController = navHostFragment.navController
 //        val navController = findNavController(navHostFragment.id)
 		val bottomBar: BottomNavigationView = mainBinding.bottomBar
+		
 		// Passing each menu ID as a set of Ids because each
 		// menu should be considered as top level destinations.
 		appBarConfiguration = AppBarConfiguration(

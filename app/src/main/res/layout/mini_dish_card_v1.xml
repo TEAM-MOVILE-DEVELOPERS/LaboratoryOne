@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/im_upload"
+            android:layout_width="110dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="18dp"
+            android:contentDescription="@string/upload_image_view"
+            android:src="@drawable/ic_upload"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/dish_name_text_view"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/dish_name_text_view"
+            android:textAppearance="@style/name_dish_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/im_upload"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cost_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/price_text_view"
+            android:textAppearance="@style/RobotoMedium14"
+            app:layout_constraintStart_toStartOf="@+id/dish_type_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/dish_type_text_view"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/preparation_time_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="2dp"
+            android:text="@string/preparation_time_text_view"
+            android:textAppearance="@style/RobotoCondensedRegular14"
+            android:textColor="#F44336"
+            app:drawableStartCompat="@drawable/ic_fast_clock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cost_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/cost_text_view"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/dish_type_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/dish_type_text_view"
+            android:textAppearance="@style/RobotoCondensedRegular14"
+            android:textColor="#F44336"
+            app:layout_constraintStart_toStartOf="@+id/dish_name_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/dish_name_text_view"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/edit_dish_button"
+            style="@style/Buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/edit_dish_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toEndOf="@+id/dish_type_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/dish_name_text_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
