@@ -85,4 +85,6 @@
     <string name="ic_go_to_payment_methods">Ir a métodos de pago</string>
     <string name="ic_go_to_locations">Ir a ubicaciones de entrega</string>
     <string name="ic_go_to_social_networks">Ir a tus redes sociales</string>
+    <string name="edit_dish_button">Editar</string>
+    <string name="new_dish_button">Botón de nuevo plato</string>
 </resources>

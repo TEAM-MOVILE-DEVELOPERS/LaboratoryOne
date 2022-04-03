@@ -42,11 +42,11 @@ class DishesAdapter(
         private val binding = DishCardBinding.bind(itemView)
         fun bind(dish: Dish) {
             with(binding){
-                typeDishTextview.text = dish.food_kind
-                nameTextview.text = dish.dish_name
-                madeTextview.text = dish.cook_name
-                priceTextview.text = dish.price
-                timePreparationTextview.text = dish.preparation_time
+                dishTypeTextView.text = dish.food_kind
+                dishNameTextView.text = dish.dish_name
+                cookNameTextView.text = dish.cook_name
+                costTextView.text = dish.price
+                preparationTimeTextView.text = dish.preparation_time
             }
         }
     }

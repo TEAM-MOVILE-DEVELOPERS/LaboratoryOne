@@ -91,11 +91,18 @@
         <item name="android:shadowRadius">12</item>
     </style>
 
-    <style name="PoppinsRoboto14" parent="@android:style/TextAppearance">
+    <style name="RobotoCondensedRegular14" parent="@android:style/TextAppearance">
         <item name="fontFamily">@font/roboto_condensed_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/secondary_text_icons</item>
     </style>
+
+    <style name="RobotoMedium14" parent="@android:style/TextAppearance">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
 
     <style name="RoundPhotos" parent="">
         <item name="cardCornerRadius">52dp</item>

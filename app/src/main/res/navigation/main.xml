@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_profile_fragment_to_payment_fragment"
             app:destination="@id/payment_fragment" />
+        <action
+            android:id="@+id/action_profile_fragment_to_myDishesFragment"
+            app:destination="@id/my_dishes_fragment" />
     </fragment>
     <fragment
         android:id="@+id/payment_fragment"
@@ -80,4 +83,9 @@
         app:destination="@id/home_fragment"
         app:popUpTo="@id/splash_fragment"
         app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/my_dishes_fragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.my_dishes.MyDishesFragment"
+        android:label="@string/title_my_dishes"
+        tools:layout="@layout/fragment_my_dishes" />
 </navigation>

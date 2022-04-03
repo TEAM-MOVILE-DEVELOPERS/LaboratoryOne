@@ -26,6 +26,9 @@ class ProfileFragment : Fragment() {
 			paymentMethodsLayout.setOnClickListener {
 				findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToPaymentFragment())
 			}
+			myDishesLayout.setOnClickListener {
+				findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToMyDishesFragment())
+			}
 		}
 	}
 }
