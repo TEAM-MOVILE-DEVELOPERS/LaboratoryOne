@@ -48,15 +48,17 @@ class PaymentFragment : Fragment() {
                     numberInputText.text.toString(),
                     dateInputText.text.toString(),
                     codeInputText.text.toString()
-                )}
+                )
+            }
 
-                editButton.setOnClickListener {
-                    paymentViewModel.editDatos(
-                        typeInputText.text.toString(),
-                        numberInputText.text.toString(),
-                        dateInputText.text.toString(),
-                        codeInputText.text.toString()
-                    )}
+            editButton.setOnClickListener {
+                paymentViewModel.editDatos(
+                    typeInputText.text.toString(),
+                    numberInputText.text.toString(),
+                    dateInputText.text.toString(),
+                    codeInputText.text.toString()
+                )
+            }
 
 
 
@@ -116,6 +118,10 @@ class PaymentFragment : Fragment() {
                                             "La tarjeta se eliminó con éxito",
                                             Toast.LENGTH_SHORT
                                         ).show()
+                                        typeInputText.text?.clear()
+                                        numberInputText.text?.clear()
+                                        dateInputText.text?.clear()
+                                        codeInputText.text?.clear()
                                     }
                             } else {
                                 Toast.makeText(
