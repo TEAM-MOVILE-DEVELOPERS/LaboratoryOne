@@ -19,6 +19,7 @@ class PaymentFragment : Fragment() {
     private lateinit var paymentViewModel: PaymentViewModel
     private lateinit var auth: FirebaseAuth
     private val db = FirebaseFirestore.getInstance()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,7 +41,6 @@ class PaymentFragment : Fragment() {
         })
         auth = Firebase.auth
 
-
         with(paymentBinding) {
             addButton.setOnClickListener {
                 paymentViewModel.enterDatos(
@@ -48,8 +48,17 @@ class PaymentFragment : Fragment() {
                     numberInputText.text.toString(),
                     dateInputText.text.toString(),
                     codeInputText.text.toString()
-                )
-            }
+                )}
+
+                editButton.setOnClickListener {
+                    paymentViewModel.editDatos(
+                        typeInputText.text.toString(),
+                        numberInputText.text.toString(),
+                        dateInputText.text.toString(),
+                        codeInputText.text.toString()
+                    )}
+
+
 
             getButton.setOnClickListener {
                 if (typeInputText.text.toString().isEmpty()) {
@@ -60,12 +69,25 @@ class PaymentFragment : Fragment() {
                     ).show()
                 } else {
                     db.collection("payments").document(typeInputText.text.toString()).get()
-                        .addOnSuccessListener {
-                            numberInputText.setText(it.get("number") as String?)
-                            dateInputText.setText(it.get("date") as String?)
-                            codeInputText.setText(it.get("code") as String?)
-                            infoTextView.text = (it.get("type") as String?)
-                            infoNumberTextView.text = it.get("number") as String?
+                        .addOnSuccessListener { documento ->
+                            if (documento.exists()) {
+                                db.collection("payments").document(typeInputText.text.toString())
+                                    .get()
+                                    .addOnSuccessListener {
+                                        numberInputText.setText(it.get("number") as String?)
+                                        dateInputText.setText(it.get("date") as String?)
+                                        codeInputText.setText(it.get("code") as String?)
+                                        infoTextView.text = (it.get("type") as String?)
+                                        infoNumberTextView.text = it.get("number") as String?
+                                    }
+                            } else {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "El documento no existe, por favor verificar ",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+
+                            }
 
                         }
                 }
@@ -80,12 +102,29 @@ class PaymentFragment : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    db.collection("payments").document(typeInputText.text.toString()).delete()
-                    Toast.makeText(
-                        requireContext(),
-                        "La tarjeta se eliminó con éxito",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    db.collection("payments").document(typeInputText.text.toString()).get()
+                        .addOnSuccessListener { documento ->
+                            if (documento.exists()) {
+                                db.collection("payments").document(typeInputText.text.toString())
+                                    .get()
+                                    .addOnSuccessListener {
+
+                                        db.collection("payments")
+                                            .document(typeInputText.text.toString()).delete()
+                                        Toast.makeText(
+                                            requireContext(),
+                                            "La tarjeta se eliminó con éxito",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                            } else {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "El documento no existe, por favor verificar ",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
                 }
 
             }
@@ -103,15 +142,15 @@ class PaymentFragment : Fragment() {
             infoTextView.text = type
             infoNumberTextView.text = number
         }
-
-
     }
+
 
     private fun onMsgDoneSubscribe(msg: String?) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
-
     }
 
-
 }
+
+
+
 

@@ -87,7 +87,8 @@
     <string name="ic_go_to_social_networks">Ir a tus redes sociales</string>
     <string name="edit_dish_button">Editar</string>
     <string name="new_dish_button">Botón de nuevo plato</string>
-    <string name="get">Editar</string>
-    <string name="delete">Eliminar</string>
+    <string name="get">Buscar</string>
+    <string name="delete">Borrar</string>
     <string name="infonumber" />
+    <string name="edit">Editar</string>
 </resources>
