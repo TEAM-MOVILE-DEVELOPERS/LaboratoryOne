@@ -52,4 +52,7 @@
     <string name="add">Agregar</string>
     <string name="ejemplo_info">Información de tarjeta</string>
     <string name="add_payment_text_view">Agrega método de pago</string>
+    <string name="get">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="infonumber" />
 </resources>

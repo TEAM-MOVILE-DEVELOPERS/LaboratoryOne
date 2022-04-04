@@ -15,7 +15,8 @@ class PaymentRepository {
         )
 
         val paymentDao : PaymentDao =UMadeFoods.databasePay.PaymentDao()
-        paymentDao.savePayment(payment)
+        //TODO: "Verificar implementación"
+//        paymentDao.savePayment(payment)
 
 
     }

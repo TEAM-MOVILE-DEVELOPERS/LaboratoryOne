@@ -21,10 +21,7 @@ class PaymentViewModel : ViewModel() {
         }
         else{
             dataValidate.value = true
-
         }
-
-
     }
 
     fun savePayment(type: String, number: String, date: String, code: String) {
