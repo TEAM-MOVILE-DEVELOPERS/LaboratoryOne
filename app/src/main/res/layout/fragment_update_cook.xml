@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.delete.DeleteFragment">
+    tools:context=".ui.update.UpdateCookFragment">
 
     <TextView
-        android:id="@+id/delete_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Delete" />
+        android:text="Hello" />
 
 </FrameLayout>

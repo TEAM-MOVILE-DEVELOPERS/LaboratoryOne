@@ -50,5 +50,31 @@
     <string name="name_chef_textview">Nombre del Chef</string>
     <string name="rank_cook">Rango del Chef</string>
     <string name="title_dishes">Menú</string>
+    <string name="rec_pass_textView">Recuperar Contraseña</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="rec_pass_button_text">Recuperar</string>
+    <string name="dish_register_textView">Registro de Platillo</string>
+    <string name="dish_register_textView">Registro de Platillo</string>
+    <string name="dish_name_hint">Nombre del Plato</string>
+    <string name="dish_type_hint">Tipo de Plato</string>
+    <string name="cook_hint">Cocinero</string>
+    <string name="cooking_time_hint">Tiempo de Preparación</string>
+    <string name="available_time">Horario de disponibilidad</string>
+    <string name="dish_details_textButton">Detalles Platillo</string>
+    <string name="add_dish_button">Agregar Platillo</string>
+    <string name="add_button_text">Agregar Platillo</string>
+    <string name="msg_delete_textView">¿Desea eliminar este elemento?</string>
+    <string name="yes_delete_button">Si</string>
+    <string name="no_delete_button">No</string>
+    <string name="edit_user_textView">Editar Información del Usuario</string>
+    <string name="telephone_input_text">Teléfono</string>
+    <string name="register_dish_textView">Registro de Platillo</string>
+    <string name="schedule_new_dish_textView">Horario de disponibilidad</string>
+    <string name="time_preparation_new_dish_editText">Tiempo de preparación</string>
+    <string name="chef_new_dish_editText">Cocinero</string>
+    <string name="type_dish_new_dish_editText">Tipo de Plato</string>
+    <string name="name_dish_new_dish_editText">Nombre del Plato</string>
+    <string name="new_dish_register_button">Agregar plato</string>
+    <string name="new_dish_imageView" />
 
 </resources>

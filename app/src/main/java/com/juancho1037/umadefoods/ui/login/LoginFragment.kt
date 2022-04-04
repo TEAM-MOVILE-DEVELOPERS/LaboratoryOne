@@ -37,10 +37,10 @@ class LoginFragment : Fragment() {
 			}
 			loginButton.setOnClickListener {
 				findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
-//				loginViewModel.ingresoDatos(
-//					emailInputText.text.toString(),
-//					passwordInputText.text.toString()
-//				)
+				loginViewModel.ingresoDatos(
+					emailInputText.text.toString(),
+					passwordInputText.text.toString()
+				)
 			}
 		}
 	}

@@ -41,6 +41,15 @@ class RegisterFragment : Fragment() {
 			findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToLoginFragment())
 		}
 
+/*		registerViewModel.errorMsgDone.observe(this.viewLifecycleOwner) { result ->
+			onErrorMsgDoneSubscribe(result)
+		}
+		}*/
+
+		registerViewModel.registerSucessDone.observe(viewLifecycleOwner){ result->
+			onRegisterSucessDoneSubscribe(result)
+		}
+
 		with(registerBinding){
 			registerButton.setOnClickListener {
 				
@@ -54,7 +63,16 @@ class RegisterFragment : Fragment() {
 			}
 		}
 	}
+
+	private fun onRegisterSucessDoneSubscribe(result: Boolean?) {
+		//Que hacemos aca
+	}
+
 	private fun onMsgDoneSubscribe(msg: String?) {
 		Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
 	}
+
 }
+
+
+
