@@ -14,7 +14,6 @@
         android:contentDescription="@string/im_kneding_bread"
         android:src="@mipmap/im_kneading_bread_foreground" />
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/my_dishes_layout"
         android:layout_width="match_parent"
