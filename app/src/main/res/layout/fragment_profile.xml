@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:contentDescription="@string/dish_icon"
+            android:src="@drawable/ic_tabler_soup"
             app:layout_constraintBottom_toBottomOf="@+id/ic_go_to_my_dishes"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ic_go_to_my_dishes" />

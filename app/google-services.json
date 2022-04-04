@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "86036078711",
+    "project_id": "u-made-foods",
+    "storage_bucket": "u-made-foods.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86036078711:android:b7fee5f9b8116de6612672",
+        "android_client_info": {
+          "package_name": "com.juancho1037.umadefoods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86036078711-3468rrm33ufbkp3g37i33i1u7eskev1t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juancho1037.umadefoods",
+            "certificate_hash": "e4ba2bd9f81ff088c9db693a2762215f2d709525"
+          }
+        },
+        {
+          "client_id": "86036078711-asvuej5f84ttbb7muqsf7v4i9b69dd29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juancho1037.umadefoods",
+            "certificate_hash": "de3d964a1515e0a67e2136444c708e8cb120cf80"
+          }
+        },
+        {
+          "client_id": "86036078711-eu9q88dc68joccmba354hm6hb20bcrrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juancho1037.umadefoods",
+            "certificate_hash": "7152da8c5d845054b8e3c49419ca2e85f41a39b0"
+          }
+        },
+        {
+          "client_id": "86036078711-vk80tfa1gp913a1dcjrmsro900n7eit0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juancho1037.umadefoods",
+            "certificate_hash": "f1dc7e470cc69048d5ebbee23ef932602378e47e"
+          }
+        },
+        {
+          "client_id": "86036078711-uivu0jifaaodo290mn15vuforrsa2kp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB45qDOAdbfn7x_qpCMj-qMb80rKUAbBgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86036078711-uivu0jifaaodo290mn15vuforrsa2kp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
