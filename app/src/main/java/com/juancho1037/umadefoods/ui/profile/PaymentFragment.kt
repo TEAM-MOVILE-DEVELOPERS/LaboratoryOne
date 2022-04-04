@@ -49,18 +49,6 @@ class PaymentFragment : Fragment() {
                     dateInputText.text.toString(),
                     codeInputText.text.toString()
                 )
-                val type = typeInputText.text.toString()
-
-                db.collection("payments").document(type).set(
-                    hashMapOf(
-                        "type" to typeInputText.text.toString(),
-                        "number" to numberInputText.text.toString(),
-                        "date" to dateInputText.text.toString(),
-                        "code" to codeInputText.text.toString()
-                    )
-                )
-
-
             }
 
             getButton.setOnClickListener {
@@ -76,7 +64,7 @@ class PaymentFragment : Fragment() {
                             numberInputText.setText(it.get("number") as String?)
                             dateInputText.setText(it.get("date") as String?)
                             codeInputText.setText(it.get("code") as String?)
-                            infoTextView.text =(it.get("type") as String?)
+                            infoTextView.text = (it.get("type") as String?)
                             infoNumberTextView.text = it.get("number") as String?
 
                         }
@@ -113,14 +101,14 @@ class PaymentFragment : Fragment() {
             paymentViewModel.savePayment(type, number, date, code)
 
             infoTextView.text = type
-            infoNumberTextView.text=number
+            infoNumberTextView.text = number
         }
 
 
     }
 
     private fun onMsgDoneSubscribe(msg: String?) {
-        Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
 
     }
 
