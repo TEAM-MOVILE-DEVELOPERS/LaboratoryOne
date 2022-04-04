@@ -6,19 +6,19 @@ import java.sql.Types
 class DishRepository {
 
     suspend fun saveDish(
-        food_kind: String,
-        dish_name: String,
-        cook_name: String,
-        price: String,
-        time_preparation:String
+	    dish_name: String ,
+	    food_kind: String ,
+	    cook_name: String ,
+	    price: String ,
+	    preparation_time: String
     ){
         val dish = Dish(
-            id = Types.NULL,
-            food_kind = food_kind,
-            dish_name = dish_name,
-            cook_name = cook_name,
-            price = price,
-            time_preparation = time_preparation
+	        id = Types.NULL ,
+	        dish_name = dish_name ,
+	        food_kind = food_kind ,
+	        cook_name = cook_name ,
+	        price = price ,
+	        preparation_time = preparation_time
         )
 
         val dishDao: DishDao = UMadeFoods.dish_database.DishDao()

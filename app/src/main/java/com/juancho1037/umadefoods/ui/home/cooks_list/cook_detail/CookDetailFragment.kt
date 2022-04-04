@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.juancho1037.umadefoods.R
 import com.juancho1037.umadefoods.databinding.FragmentCookDetailBinding
 import com.juancho1037.umadefoods.ui.home.cooks_list.CooksViewModel
+import com.juancho1037.umadefoods.ui.home.dishes_list.DishesAdapter
 
 class CookDetailFragment : Fragment() {
 	private lateinit var cookDetailBinding: FragmentCookDetailBinding
@@ -19,12 +22,24 @@ class CookDetailFragment : Fragment() {
 		inflater: LayoutInflater , container: ViewGroup? ,
 		savedInstanceState: Bundle?
 	): View {
-		cookDetailBinding = FragmentCookDetailBinding.inflate(inflater, container , false)
+		cookDetailBinding = FragmentCookDetailBinding.inflate(inflater , container , false)
 		cooksViewModel = ViewModelProvider(this)[CooksViewModel::class.java]
 		return cookDetailBinding.root
 	}
 	
 	override fun onViewCreated(view: View , savedInstanceState: Bundle?) {
 		super.onViewCreated(view , savedInstanceState)
+		cookDetailBinding.myDishesRecyclerView.apply {
+			layoutManager = LinearLayoutManager(
+				this@CookDetailFragment.requireContext() ,
+				LinearLayoutManager.HORIZONTAL ,
+				false
+			)
+			setHasFixedSize(false)
+			// Pasar los platos sólo del cocinero aquí
+//			adapter = DishesAdapter(array de los platos del cocinero)
+		}
 	}
+	
+	
 }

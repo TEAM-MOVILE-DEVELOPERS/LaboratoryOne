@@ -9,25 +9,29 @@ import com.juancho1037.umadefoods.databinding.DishCardBinding
 import com.juancho1037.umadefoods.ui.home.dishes_list.local_dishes.Dish
 
 class DishesAdapter(
-    private val dishesList: ArrayList<Dish>
-        ):RecyclerView.Adapter<DishesAdapter.DishesViewHolder>(){
-
+    private val dishesList: ArrayList<Dish> ,
+    private val onItemClicked: (Dish) -> Unit
+) : RecyclerView.Adapter<DishesAdapter.DishesViewHolder>() {
+    
     override fun onCreateViewHolder(
-        parent: ViewGroup,
+        parent: ViewGroup ,
         viewType: Int
-    ): DishesAdapter.DishesViewHolder {
+    ): DishesViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.dish_card, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.dish_card , parent , false)
         return DishesViewHolder(view)
     }
-
-    override fun onBindViewHolder(holder: DishesViewHolder, position: Int) {
+    
+    override fun onBindViewHolder(holder: DishesViewHolder , position: Int) {
         val dish = dishesList[position]
         holder.bind(dish)
+        holder.itemView.setOnClickListener {
+            onItemClicked(dishesList[position])
+        }
     }
-
+    
     override fun getItemCount(): Int = dishesList.size
-
+    
     fun appendItems(newList: ArrayList<Dish>) {
         dishesList.clear()
         dishesList.addAll(newList)
@@ -38,11 +42,11 @@ class DishesAdapter(
         private val binding = DishCardBinding.bind(itemView)
         fun bind(dish: Dish) {
             with(binding){
-                typeDishTextview.text = dish.food_kind
-                nameTextview.text = dish.dish_name
-                madeTextview.text = dish.cook_name
-                priceTextview.text = dish.price
-                timePreparationTextview.text = dish.time_preparation
+                dishTypeTextView.text = dish.food_kind
+                dishNameTextView.text = dish.dish_name
+                cookNameTextView.text = dish.cook_name
+                costTextView.text = dish.price
+                preparationTimeTextView.text = dish.preparation_time
             }
         }
     }

@@ -14,13 +14,13 @@
     <string name="logo_image_view">Logo</string>
 <!--    Fragmento Login-->
     <string name="login_button">Iniciar sesión</string>
-    <string name="register_button"><u>Regístrate</u></string>
+    <string name="register_button">Regístrate</string>
     <string name="have_an_account_text_view">¿No tienes una cuenta?</string>
-    <string name="forgot_password_text_view"> <u> Olvidé mi contraseña</u></string>
+    <string name="forgot_password_text_view">Olvidé mi contraseña</string>
     <string name="create_account_text_view">Crea tu cuenta</string>
 <!--    Fragmento Lista de cocineros-->
     <string name="cook_name_text_view">Nombre del cocinero</string>
-    <string name="address_text_view">Dirección</string>
+    <string name="location_text_view">Ubicación</string>
     <string name="email_text_view">Correo electrónico</string>
 <!--    Fragmento Detalle del plato -->
     <string name="dish_name_text_view">Nombre del platillo</string>
@@ -40,11 +40,10 @@
     <string name="dish_type_text_view">Tipo de Platillo</string>
     <string name="made_by_text_view">Hecho por …</string>
     <string name="price_text_view">$ Precio</string>
-    <string name="preparation_time_text_view">30 – 45 min</string>
-    <string name="location_text_view">Mi ubicación</string>
+    <string name="preparation_time_text_view">45 min</string>
     <string name="name_chef_text_view">Nombre del Chef</string>
     <string name="cook_rank">Rango del Chef</string>
-<!--    Fragmento Payment-->
+    <!--    Fragmento Payment-->
     <string name="type">Ingrese el tipo de tarjeta:</string>
     <string name="number">Ingrese el número de la tarjeta:</string>
     <string name="date">Ingrese la fecha de expiración:</string>
@@ -52,6 +51,42 @@
     <string name="add">Agregar</string>
     <string name="ejemplo_info">Información de tarjeta</string>
     <string name="add_payment_text_view">Agrega método de pago</string>
+    <string name="cook_image_view">Imagen del cocinero</string>
+    <string name="about_me_text_view">Acerca de mí</string>
+    <string name="like_button_text_view">Botón me gusta</string>
+    <string name="description_text_view">Descripción</string>
+    <string name="add_to_cart_button">Agregar al carrito</string>
+    <string name="my_dish_image_view">Imagen del platillo</string>
+    <string name="dish_score_text_view">3.5</string>
+    <string name="cost_text_view">Precio: $ 5000</string>
+    <string name="nutritional_value_text_view">Valor nutricional</string>
+    <string name="proteins_text_view">2.5g</string>
+    <string name="proteins_title">Proteinas</string>
+    <string name="carbohydrates_text_view">14.7g</string>
+    <string name="sodium_text_view">19%*</string>
+    <string name="potassium_text_view">5%*</string>
+    <string name="vitamins_text_view">Rico en Vitaminas A, C y B3</string>
+    <string name="calories_text_view">145 cal</string>
+    <string name="portion_size_text_view">250g</string>
+    <string name="minus_text_view">-</string>
+    <string name="plus_text_view">+</string>
+    <string name="available_text_view">Disponibles 5</string>
+    <string name="cook_score_text_view">3.5</string>
+    <string name="credit_card_icon">Ícono de tarjeta de crédito</string>
+    <string name="im_kneding_bread">Imagen de amasar pan</string>
+    <string name="dish_icon">Ícono de sopa</string>
+    <string name="title_my_dishes">Mis platos</string>
+    <string name="ic_person">Ícono editar perfil</string>
+    <string name="title_edit_profile">Editar perfil</string>
+    <string name="title_locations">Ubicaciones</string>
+    <string name="title_social_networks">Redes sociales</string>
+    <string name="ic_go_to_my_dishes">Ir a mis platos</string>
+    <string name="ic_go_to_edit_profile">Ir a editar perfil</string>
+    <string name="ic_go_to_payment_methods">Ir a métodos de pago</string>
+    <string name="ic_go_to_locations">Ir a ubicaciones de entrega</string>
+    <string name="ic_go_to_social_networks">Ir a tus redes sociales</string>
+    <string name="edit_dish_button">Editar</string>
+    <string name="new_dish_button">Botón de nuevo plato</string>
     <string name="get">Editar</string>
     <string name="delete">Eliminar</string>
     <string name="infonumber" />

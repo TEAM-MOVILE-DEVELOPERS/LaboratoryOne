@@ -33,9 +33,6 @@ class LoginFragment : Fragment() {
 		loginViewModel.msgDone.observe(viewLifecycleOwner) { result ->
 			onMsgDoneSubscribe(result)
 		}
-		// Esconder la ActionBar, necesario para cuando regresa de Home
-		// ya que ahí la vuelve a mostrar
-//		(activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 		
 		with(loginBinding){
 			registerTextView.setOnClickListener {

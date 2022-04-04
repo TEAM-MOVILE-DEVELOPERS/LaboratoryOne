@@ -12,7 +12,7 @@ interface CookDao {
     suspend fun searchCook(nameCook: String): Cook
 
     @Delete
-    suspend fun cookDelete(cook: Cook)
+    suspend fun deleteCook(cook: Cook)
 
     @Query("SELECT * FROM table_cooks")
     suspend fun loadCook(): MutableList<Cook>

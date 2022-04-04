@@ -24,49 +24,68 @@
         android:id="@+id/profile_fragment"
         android:name="com.juancho1037.umadefoods.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profile_fragment_to_payment_fragment"
             app:destination="@id/payment_fragment" />
+        <action
+            android:id="@+id/action_profile_fragment_to_myDishesFragment"
+            app:destination="@id/my_dishes_fragment" />
     </fragment>
     <fragment
         android:id="@+id/payment_fragment"
         android:name="com.juancho1037.umadefoods.ui.profile.PaymentFragment"
         android:label="@string/title_payment"
-        tools:layout="@layout/fragment_payment"
-        />
+        tools:layout="@layout/fragment_payment" />
     <fragment
         android:id="@+id/splash_fragment"
         android:name="com.juancho1037.umadefoods.ui.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_splash_fragment_to_login_fragment"
-            app:destination="@id/login_fragment"
+            android:id="@+id/action_splash_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
             app:popUpTo="@id/splash_fragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <navigation
+        android:id="@+id/login_navigation"
+        app:startDestination="@id/login_fragment">
+        <fragment
+            android:id="@+id/login_fragment"
+            android:name="com.juancho1037.umadefoods.ui.login.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_login_fragment_to_home_fragment"
+                app:destination="@id/home_fragment" />
+            <action
+                android:id="@+id/action_login_fragment_to_register_fragment"
+                app:destination="@id/register_fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/register_fragment"
+            android:name="com.juancho1037.umadefoods.ui.register.RegisterFragment"
+            android:label="RegisterFragment"
+            tools:layout="@layout/fragment_register">
+            <action
+                android:id="@+id/action_register_fragment_to_login_fragment"
+                app:destination="@id/login_fragment" />
+        </fragment>
+    </navigation>
+    <action
+        android:id="@+id/action_global_login_navigation"
+        app:destination="@id/login_navigation"
+        app:popUpTo="@id/login_navigation"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_home_fragment"
+        app:destination="@id/home_fragment"
+        app:popUpTo="@id/splash_fragment"
+        app:popUpToInclusive="true" />
     <fragment
-        android:id="@+id/login_fragment"
-        android:name="com.juancho1037.umadefoods.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_login_fragment_to_home_fragment"
-            app:destination="@id/home_fragment"
-            app:popUpTo="@id/home_fragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_login_fragment_to_register_fragment"
-            app:destination="@id/register_fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/register_fragment"
-        android:name="com.juancho1037.umadefoods.ui.register.RegisterFragment"
-        tools:layout="@layout/fragment_register"
-        android:label="RegisterFragment" >
-        <action
-            android:id="@+id/action_register_fragment_to_login_fragment"
-            app:destination="@id/login_fragment" />
-    </fragment>
+        android:id="@+id/my_dishes_fragment"
+        android:name="com.juancho1037.umadefoods.ui.profile.my_dishes.MyDishesFragment"
+        android:label="@string/title_my_dishes"
+        tools:layout="@layout/fragment_my_dishes" />
 </navigation>
